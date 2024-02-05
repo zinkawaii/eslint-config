@@ -4,5 +4,9 @@
   "main": "index.js",
   "author": "KazariEX",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KazariEX/eslint-config.git"
+  },
   "type": "module"
 }
