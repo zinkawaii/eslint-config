@@ -1,0 +1,9 @@
+import { prefixary } from "../utils";
+
+export default prefixary({
+    "antfu/if-newline": "off",
+    "antfu/no-import-dist": "off",
+    "antfu/top-level-function": "off",
+    "node/prefer-global/process": "off",
+    "unused-imports/no-unused-vars": "off"
+});

@@ -1,6 +1,6 @@
-import { withPrefix } from "../utils/index.js";
+import { prefixary } from "../utils";
 
-export default withPrefix("vue", {
+export default prefixary("vue", {
     "attribute-hyphenation": "warn",
     "attributes-order": ["warn", {
         order: [
@@ -18,6 +18,7 @@ export default withPrefix("vue", {
             "CONTENT"
         ]
     }],
+    "comma-dangle": ["warn", "never"],
     "component-definition-name-casing": ["warn", "kebab-case"],
     "first-attribute-linebreak": ["warn", {
         singleline: "beside",
@@ -27,6 +28,8 @@ export default withPrefix("vue", {
         singleline: "never",
         multiline: "always"
     }],
+    "html-closing-bracket-spacing": "off",
+    "html-indent": "off",
     "html-quotes": ["warn", "double"],
     "html-self-closing": ["warn", {
         html: {
@@ -37,6 +40,7 @@ export default withPrefix("vue", {
         svg: "always",
         math: "always"
     }],
+    "multiline-html-element-content-newline": "off",
     "mustache-interpolation-spacing": ["warn", "always"],
     "no-dupe-keys": "warn",
     "no-dupe-v-else-if": "warn",
@@ -65,7 +69,9 @@ export default withPrefix("vue", {
     "no-v-text-v-html-on-component": "warn",
     "no-watch-after-await": "warn",
     "one-component-per-file": "warn",
+    "operator-linebreak": "off",
     "prefer-import-from-vue": "warn",
+    "prefer-template": "warn",
     "prop-name-casing": ["warn", "camelCase"],
     "require-component-is": "warn",
     "require-explicit-emits": "warn",
@@ -74,18 +80,22 @@ export default withPrefix("vue", {
     "require-slots-as-functions": "warn",
     "require-toggle-inside-transition": "warn",
     "require-valid-default-prop": "warn",
+    "require-v-for-key": "off",
     "return-in-computed-property": "warn",
     "return-in-emits-validator": "warn",
+    "singleline-html-element-content-newline": "off",
     "this-in-template": ["warn", "never"],
     "use-v-on-exact": "warn",
     "valid-attribute-name": "warn",
     "valid-define-emits": "warn",
     "valid-define-props": "warn",
     "valid-next-tick": "warn",
+    "valid-template-root": "off",
     "valid-v-bind": "warn",
     "valid-v-cloak": "warn",
     "valid-v-else-if": "warn",
     "valid-v-else": "warn",
+    "valid-v-for": "off",
     "valid-v-html": "warn",
     "valid-v-if": "warn",
     "valid-v-memo": "warn",
