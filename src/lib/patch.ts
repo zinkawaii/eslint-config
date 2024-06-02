@@ -1,6 +1,7 @@
 import { prefixary } from "../utils";
 
 export default prefixary({
+    "antfu/curly": "off",
     "antfu/if-newline": "off",
     "antfu/no-import-dist": "off",
     "antfu/top-level-function": "off",

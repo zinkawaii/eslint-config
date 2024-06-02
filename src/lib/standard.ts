@@ -64,7 +64,7 @@ export default prefixary({
     "no-invalid-this": "off",
     "no-iterator": "warn",
     "no-label-var": "off",
-    "no-labels": "warn",
+    "no-labels": "off",
     "no-lone-blocks": "warn",
     "no-lonely-if": "warn",
     "no-loop-func": "warn",

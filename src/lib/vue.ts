@@ -20,6 +20,7 @@ export default prefixary("vue", {
     }],
     "comma-dangle": ["warn", "never"],
     "component-definition-name-casing": ["warn", "kebab-case"],
+    "component-name-in-template-casing": ["warn", "kebab-case"],
     "first-attribute-linebreak": ["warn", {
         singleline: "beside",
         multiline: "below"

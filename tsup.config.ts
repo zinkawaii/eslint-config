@@ -9,6 +9,5 @@ export default defineConfig({
         "esm"
     ],
     clean: true,
-    dts: true,
     shims: true
 });
