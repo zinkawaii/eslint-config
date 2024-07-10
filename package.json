@@ -1,15 +1,13 @@
 {
   "name": "@zinkawaii/eslint-config",
   "version": "0.1.1",
-  "author": "KazariEX",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/KazariEX/eslint-config.git"
-  },
+  "author": "KazariEX",
+  "repository": "KazariEX/eslint-config",
   "type": "module",
   "files": [
     "dist",
+    "index.d.ts",
     "LICENSE"
   ],
   "main": "./dist/index.js",
@@ -26,7 +24,7 @@
     "watch": "tsup --watch"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.19.2",
-    "tsup": "^8.0.2"
+    "@antfu/eslint-config": "^2.22.0",
+    "tsup": "^8.1.0"
   }
 }
