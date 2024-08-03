@@ -120,7 +120,7 @@ export default prefixary({
     "no-warning-comments": "off",
     "object-shorthand": ["warn", "methods"],
     "one-var": ["warn", {
-        uninitialized: "consecutive"
+        initialized: "never"
     }],
     "operator-assignment": ["warn", "always"],
     "prefer-arrow-callback": ["warn", {
