@@ -6,9 +6,7 @@
   "repository": "KazariEX/eslint-config",
   "type": "module",
   "files": [
-    "dist",
-    "index.d.ts",
-    "LICENSE"
+    "index.d.ts"
   ],
   "main": "./dist/index.js",
   "types": "./index.d.ts",
@@ -24,7 +22,7 @@
     "watch": "tsup --watch"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.22.0",
-    "tsup": "^8.1.0"
+    "@antfu/eslint-config": "^2.24.1",
+    "tsup": "^8.2.4"
   }
 }
