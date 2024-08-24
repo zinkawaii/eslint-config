@@ -37,7 +37,6 @@ export default prefixary({
     "max-nested-callbacks": "off",
     "max-params": "off",
     "max-statements": "off",
-    "multiline-comment-style": "warn",
     "new-cap": "warn",
     "no-alert": "warn",
     "no-array-constructor": "warn",

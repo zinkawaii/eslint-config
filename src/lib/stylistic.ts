@@ -1,6 +1,8 @@
 import { prefixary } from "../utils";
 
 export default prefixary("style", {
+    "array-bracket-newline": ["warn", "consistent"],
+    "array-bracket-spacing": ["warn", "never"],
     "array-element-newline": ["warn", "consistent"],
     "arrow-parens": ["warn", "always"],
     "arrow-spacing": ["warn", {
@@ -21,9 +23,6 @@ export default prefixary("style", {
     "function-call-argument-newline": ["warn", "consistent"],
     "function-call-spacing": ["warn", "never"],
     "function-paren-newline": ["warn", "consistent"],
-    "implicit-arrow-linebreak": ["warn", "beside"],
-    "indent": "off",
-    "indent-binary-ops": "off",
     "generator-star-spacing": ["warn", {
         named: {
             before: false,
@@ -38,7 +37,9 @@ export default prefixary("style", {
             after: true
         }
     }],
-    "jsx-quotes": ["warn", "prefer-double"],
+    "implicit-arrow-linebreak": ["warn", "beside"],
+    "indent": "off",
+    "indent-binary-ops": "off",
     "key-spacing": ["warn", {
         beforeColon: false,
         afterColon: true,
@@ -48,18 +49,24 @@ export default prefixary("style", {
         before: true,
         after: true
     }],
+    "line-comment-position": "off",
     "linebreak-style": ["warn", "unix"],
+    "lines-around-comment": "off",
     "lines-between-class-members": ["warn", "always", {
         exceptAfterSingleLine: true
     }],
+    "max-len": "off",
+    "max-statements-per-line": "off",
     "member-delimiter-style": ["warn", {
         multiline: {
             delimiter: "semi",
             requireLast: true
         }
     }],
+    "multiline-comment-style": "off",
     "multiline-ternary": "off",
     "new-parens": "warn",
+    "newline-per-chained-call": "off",
     "no-confusing-arrow": "warn",
     "no-extra-parens": ["warn", "functions"],
     "no-extra-semi": "warn",
@@ -81,8 +88,10 @@ export default prefixary("style", {
     "object-property-newline": ["warn", {
         allowAllPropertiesOnSameLine: true
     }],
+    "one-var-declaration-per-line": "off",
     "operator-linebreak": "off",
     "padded-blocks": ["warn", "never"],
+    "padding-line-between-statements": "off",
     "quote-props": ["warn", "as-needed"],
     "quotes": ["warn", "double", {
         allowTemplateLiterals: true
@@ -124,5 +133,6 @@ export default prefixary("style", {
     "wrap-iife": ["warn", "inside", {
         functionPrototypeMethods: true
     }],
+    "wrap-regex": "off",
     "yield-star-spacing": ["warn", "after"]
 });
