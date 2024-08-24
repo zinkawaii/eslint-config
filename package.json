@@ -12,17 +12,19 @@
   "types": "./index.d.ts",
   "exports": {
     ".": {
+      "types": "./index.d.ts",
       "import": "./dist/index.js",
-      "require": "./dist/index.cjs",
-      "types": "./index.d.ts"
+      "require": "./dist/index.cjs"
     }
   },
   "scripts": {
     "build": "tsup",
-    "watch": "tsup --watch"
+    "watch": "tsup --watch",
+    "eslint": "eslint ."
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.24.1",
+    "@antfu/eslint-config": "^2.27.1",
+    "eslint": "^9.9.1",
     "tsup": "^8.2.4"
   }
 }
