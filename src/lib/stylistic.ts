@@ -125,9 +125,6 @@ export default prefixary("style", {
         overrides: {
             arrow: {
                 before: true
-            },
-            operator: {
-                before: true
             }
         }
     }],

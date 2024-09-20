@@ -147,7 +147,7 @@ export default prefixary({
     "require-atomic-updates": "off",
     "require-await": "off",
     "require-unicode-regexp": "off",
-    "sort-imports": "warn",
+    "sort-imports": "off",
     "sort-keys": "off",
     "sort-vars": "off",
     "strict": "off",
