@@ -19,12 +19,11 @@ export default prefixary({
             "unknown"
         ],
         internalPattern: [
-            "#**",
-            "#**/**",
-            "@/**",
-            "@@/**",
-            "~/**",
-            "~~/**"
+            "#.*",
+            "@/.*",
+            "@@/.*",
+            "~/.*",
+            "~~/.*"
         ],
         newlinesBetween: "never"
     }],
