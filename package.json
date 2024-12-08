@@ -1,7 +1,7 @@
 {
   "name": "@zinkawaii/eslint-config",
   "type": "module",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "author": "KazariEX",
   "license": "MIT",
   "repository": "KazariEX/eslint-config",
@@ -21,10 +21,13 @@
   "scripts": {
     "build": "tsup",
     "watch": "tsup --watch",
+    "prepack": "pnpm run build",
+    "release": "bumpp --no-push -c \"release: v%s\"",
     "eslint": "eslint ."
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.11.2",
+    "bumpp": "^9.8.1",
     "eslint": "^9.16.0",
     "tsup": "^8.3.5"
   }
