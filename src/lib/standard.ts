@@ -68,9 +68,7 @@ export default prefixary({
     "no-lonely-if": "warn",
     "no-loop-func": "warn",
     "no-magic-numbers": "off",
-    "no-multi-assign": ["warn", {
-        ignoreNonDeclaration: true
-    }],
+    "no-multi-assign": "off",
     "no-multi-str": "warn",
     "no-negated-condition": "off",
     "no-nested-ternary": "off",

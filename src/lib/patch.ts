@@ -4,6 +4,7 @@ export default prefixary({
     "antfu/curly": "off",
     "antfu/if-newline": "off",
     "antfu/no-import-dist": "off",
+    "antfu/no-top-level-await": "off",
     "antfu/top-level-function": "off",
     "node/prefer-global/process": "off",
     "perfectionist/sort-imports": ["warn", {
