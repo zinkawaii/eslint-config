@@ -1,7 +1,7 @@
 {
   "name": "@zinkawaii/eslint-config",
   "type": "module",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "author": "KazariEX",
   "license": "MIT",
   "repository": "KazariEX/eslint-config",
