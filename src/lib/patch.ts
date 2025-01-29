@@ -6,6 +6,7 @@ export default prefixary({
     "antfu/no-import-dist": "off",
     "antfu/no-top-level-await": "off",
     "antfu/top-level-function": "off",
+    "import/consistent-type-specifier-style": "off",
     "node/prefer-global/process": "off",
     "perfectionist/sort-imports": ["warn", {
         groups: [
