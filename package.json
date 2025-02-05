@@ -2,17 +2,15 @@
   "name": "@zinkawaii/eslint-config",
   "type": "module",
   "version": "0.1.10",
+  "packageManager": "pnpm@10.2.0",
   "author": "KazariEX",
   "license": "MIT",
   "repository": "KazariEX/eslint-config",
   "exports": {
-    ".": {
-      "types": "./index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
-    }
+    ".": "./dist/index.js"
   },
   "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "types": "./index.d.ts",
   "files": [
     "dist",
@@ -26,7 +24,7 @@
     "eslint": "eslint ."
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.1.0",
+    "@antfu/eslint-config": "^4.1.1",
     "bumpp": "^10.0.1",
     "eslint": "^9.19.0",
     "tsup": "^8.3.6"
