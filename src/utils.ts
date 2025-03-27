@@ -7,11 +7,7 @@ type WithoutPrefix<P extends string, T extends Record<string, any>> = {
 export function prefixary(rules: Rules): Rules;
 export function prefixary<P extends string, T extends WithoutPrefix<P, Rules>>(prefix: P, rules: T): Rules;
 export function prefixary<P extends string, T extends WithoutPrefix<P, Rules>>(prefix: P, rules?: T) {
-    return typeof prefix === "object"
-        ? prefix
-        : Object.fromEntries(
-            Object.entries(rules).map(([key, value]) => {
-                return [`${prefix}/${key}`, value];
-            })
-        );
+    return rules ? Object.fromEntries(
+        Object.entries(rules).map(([key, value]) => [`${prefix}/${key}`, value])
+    ) : prefix;
 }

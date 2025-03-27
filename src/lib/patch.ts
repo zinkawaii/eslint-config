@@ -32,5 +32,8 @@ export default prefixary({
     "ts/no-unused-expressions": "off",
     "unicorn/no-new-array": "off",
     "unicorn/consistent-function-scoping": "off",
-    "unused-imports/no-unused-vars": "off"
+    "unused-imports/no-unused-vars": "off",
+    "yaml/quotes": ["warn", {
+        prefer: "double"
+    }]
 });
