@@ -1,5 +1,5 @@
 import antfu from "@antfu/eslint-config";
-import zin from "./dist/index.js";
+import zin from "./src";
 
 export default antfu({
     markdown: false,
