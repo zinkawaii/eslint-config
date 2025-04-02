@@ -41,7 +41,7 @@ export default prefixary({
     "no-obj-calls": "warn",
     "no-octal": "warn",
     "no-prototype-builtins": "warn",
-    "no-redeclare": "warn",
+    "no-redeclare": "off",
     "no-regex-spaces": "warn",
     "no-self-assign": "warn",
     "no-setter-return": "warn",
