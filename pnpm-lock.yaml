@@ -11,6 +11,9 @@ importers:
       '@antfu/eslint-config':
         specifier: ^4.11.0
         version: 4.11.0(@typescript-eslint/utils@8.28.0(eslint@9.23.0(jiti@2.4.2))(typescript@5.4.5))(@vue/compiler-sfc@3.4.23)(eslint@9.23.0(jiti@2.4.2))(typescript@5.4.5)
+      '@zinkawaii/tsconfig':
+        specifier: ^0.0.1
+        version: 0.0.1
       bumpp:
         specifier: ^10.1.0
         version: 10.1.0
@@ -681,6 +684,9 @@ packages:
 
   '@vue/shared@3.4.23':
     resolution: {integrity: sha512-wBQ0gvf+SMwsCQOyusNw/GoXPV47WGd1xB5A1Pgzy0sQ3Bi5r5xm3n+92y3gCnB3MWqnRDdvfkRGxhKtbBRNgg==}
+
+  '@zinkawaii/tsconfig@0.0.1':
+    resolution: {integrity: sha512-uO40UtaaIMjc88J/NdKaF0O8mP3fm/jBhiCoMAHdCzSfincB4KJ5ddCf1yhzj8Inxl+MwjirXKAQ5e7QaLawGg==}
 
   acorn-jsx@5.3.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
@@ -2481,6 +2487,8 @@ snapshots:
       '@vue/shared': 3.4.23
 
   '@vue/shared@3.4.23': {}
+
+  '@zinkawaii/tsconfig@0.0.1': {}
 
   acorn-jsx@5.3.2(acorn@8.14.1):
     dependencies:
