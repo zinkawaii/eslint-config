@@ -1,6 +1,6 @@
 {
-  "extends": "@zinkawaii/tsconfig/tsconfig.json",
+  "extends": "@zinkawaii/tsconfig",
   "include": [
-    "./**/*.ts"
+    "src/**/*.ts"
   ]
 }

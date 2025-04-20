@@ -29,6 +29,7 @@ export default prefixary({
         ],
         newlinesBetween: "never"
     }],
+    "ts/no-empty-object-type": "off",
     "ts/no-redeclare": "warn",
     "ts/no-unused-expressions": "off",
     "unicorn/no-new-array": "off",

@@ -224,15 +224,15 @@ export default prefixary("vue", {
     "v-for-delimiter-style": ["warn", "in"],
 
     // Extension
-    ...Object.fromEntries([
+    ...Object.fromEntries(([
         "no-constant-condition",
         "no-empty-pattern",
         "no-irregular-whitespace",
         "no-loss-of-precision",
         "no-sparse-arrays"
-    ].map((rule) => [rule, recommended[rule]])),
+    ] as const).map((rule) => [rule, recommended[rule]])),
 
-    ...Object.fromEntries([
+    ...Object.fromEntries(([
         "camelcase",
         "dot-notation",
         "eqeqeq",
@@ -241,9 +241,9 @@ export default prefixary("vue", {
         "no-useless-concat",
         "object-shorthand",
         "prefer-template"
-    ].map((rule) => [rule, standard[rule]])),
+    ] as const).map((rule) => [rule, standard[rule]])),
 
-    ...Object.fromEntries([
+    ...Object.fromEntries(([
         "array-bracket-newline",
         "array-bracket-spacing",
         "array-element-newline",
@@ -268,7 +268,7 @@ export default prefixary("vue", {
         "space-infix-ops",
         "space-unary-ops",
         "template-curly-spacing"
-    ].map((rule) => [rule, stylistic[`style/${rule}`]])),
+    ] as const).map((rule) => [rule, stylistic[`style/${rule}`]])),
 
     // Conflict with Nuxt
     "no-undef-components": "off",
