@@ -5,7 +5,7 @@
   "packageManager": "pnpm@10.8.1",
   "author": "KazariEX",
   "license": "MIT",
-  "repository": "KazariEX/eslint-config",
+  "repository": "zinkawaii/eslint-config",
   "exports": {
     ".": "./dist/index.js"
   },
