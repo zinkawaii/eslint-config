@@ -12,7 +12,7 @@ export default prefixary({
     "no-const-assign": "warn",
     "no-constant-binary-expression": "warn",
     "no-constant-condition": ["warn", {
-        checkLoops: false
+        checkLoops: false,
     }],
     "no-control-regex": "warn",
     "no-debugger": "warn",
@@ -53,7 +53,7 @@ export default prefixary({
     "no-unreachable": "warn",
     "no-unsafe-finally": "warn",
     "no-unsafe-negation": ["warn", {
-        enforceForOrderingRelations: true
+        enforceForOrderingRelations: true,
     }],
     "no-unsafe-optional-chaining": "warn",
     "no-unused-labels": "warn",
@@ -65,7 +65,7 @@ export default prefixary({
     "no-with": "warn",
     "require-yield": "warn",
     "use-isnan": ["warn", {
-        enforceForIndexOf: true
+        enforceForIndexOf: true,
     }],
-    "valid-typeof": "warn"
+    "valid-typeof": "warn",
 });

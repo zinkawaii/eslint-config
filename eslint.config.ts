@@ -8,6 +8,6 @@ export default antfu({
         ...zin.recommended,
         ...zin.stylistic,
         ...zin.patch,
-        "style/quote-props": ["warn", "consistent"]
-    }
+        "style/quote-props": ["warn", "consistent"],
+    },
 });

@@ -87,11 +87,11 @@ export default prefixary("vue", {
     "component-definition-name-casing": ["warn", "kebab-case"],
     "first-attribute-linebreak": ["warn", {
         singleline: "beside",
-        multiline: "below"
+        multiline: "below",
     }],
     "html-closing-bracket-newline": ["warn", {
         singleline: "never",
-        multiline: "always"
+        multiline: "always",
     }],
     "html-end-tags": "warn",
     "html-indent": ["warn", 4],
@@ -100,10 +100,10 @@ export default prefixary("vue", {
         html: {
             void: "always",
             normal: "never",
-            component: "always"
+            component: "always",
         },
         svg: "always",
-        math: "always"
+        math: "always",
     }],
     "mustache-interpolation-spacing": ["warn", "always"],
     "no-multi-spaces": "warn",
@@ -113,14 +113,14 @@ export default prefixary("vue", {
     "prop-name-casing": ["warn", "camelCase"],
     "require-prop-types": "warn",
     "v-bind-style": ["warn", "shorthand", {
-        sameNameShorthand: "always"
+        sameNameShorthand: "always",
     }],
     "v-on-event-hyphenation": ["warn", "always"],
     "v-on-style": ["warn", "shorthand"],
     "v-slot-style": ["warn", {
         atComponent: "v-slot",
         default: "shorthand",
-        named: "shorthand"
+        named: "shorthand",
     }],
 
     // Priority C
@@ -137,8 +137,8 @@ export default prefixary("vue", {
             ["ATTR_DYNAMIC", "ATTR_STATIC", "ATTR_SHORTHAND_BOOL"],
             "TWO_WAY_BINDING",
             "EVENTS",
-            "CONTENT"
-        ]
+            "CONTENT",
+        ],
     }],
     "no-lone-template": "warn",
     "no-multiple-slot-args": "warn",
@@ -150,20 +150,20 @@ export default prefixary("vue", {
         order: [
             "script",
             "template",
-            "style"
-        ]
+            "style",
+        ],
     }],
     "block-tag-newline": ["warn", {
         singleline: "always",
-        multiline: "always"
+        multiline: "always",
     }],
     "comma-dangle": ["warn", "never"],
     "component-api-style": ["warn", [
         "script-setup",
-        "composition"
+        "composition",
     ]],
     "component-name-in-template-casing": ["warn", "kebab-case", {
-        registeredComponentsOnly: false
+        registeredComponentsOnly: false,
     }],
     "component-options-name-casing": ["warn", "PascalCase"],
     "custom-event-name-casing": ["warn", "camelCase"],
@@ -174,14 +174,14 @@ export default prefixary("vue", {
             "defineProps",
             "defineModel",
             "defineEmits",
-            "defineSlots"
+            "defineSlots",
         ],
-        defineExposeLast: true
+        defineExposeLast: true,
     }],
     "define-props-declaration": ["warn", "type-based"],
     "html-comment-content-newline": ["warn", {
         singleline: "never",
-        multiline: "always"
+        multiline: "always",
     }],
     "html-comment-content-spacing": ["warn", "always"],
     "html-comment-indent": ["warn", 4],
@@ -190,10 +190,10 @@ export default prefixary("vue", {
     "no-empty-component-block": "warn",
     "no-multiple-objects-in-class": "warn",
     "no-potential-component-option-typo": ["warn", {
-        presets: ["all"]
+        presets: ["all"],
     }],
     "no-required-prop-with-default": ["warn", {
-        autofix: true
+        autofix: true,
     }],
     "no-static-inline-styles": "warn",
     "no-this-in-before-route-enter": "warn",
@@ -202,11 +202,11 @@ export default prefixary("vue", {
     "no-use-v-else-with-v-for": "warn",
     "no-useless-mustaches": ["warn", {
         ignoreIncludesComment: true,
-        ignoreStringEscape: true
+        ignoreStringEscape: true,
     }],
     "no-useless-v-bind": ["warn", {
         ignoreIncludesComment: true,
-        ignoreStringEscape: true
+        ignoreStringEscape: true,
     }],
     "padding-line-between-blocks": ["warn", "always"],
     "prefer-define-options": "warn",
@@ -229,7 +229,7 @@ export default prefixary("vue", {
         "no-empty-pattern",
         "no-irregular-whitespace",
         "no-loss-of-precision",
-        "no-sparse-arrays"
+        "no-sparse-arrays",
     ] as const).map((rule) => [rule, recommended[rule]])),
 
     ...Object.fromEntries(([
@@ -240,7 +240,7 @@ export default prefixary("vue", {
         "no-restricted-syntax",
         "no-useless-concat",
         "object-shorthand",
-        "prefer-template"
+        "prefer-template",
     ] as const).map((rule) => [rule, standard[rule]])),
 
     ...Object.fromEntries(([
@@ -267,7 +267,7 @@ export default prefixary("vue", {
         "space-in-parens",
         "space-infix-ops",
         "space-unary-ops",
-        "template-curly-spacing"
+        "template-curly-spacing",
     ] as const).map((rule) => [rule, stylistic[`style/${rule}`]])),
 
     // Conflict with Nuxt
@@ -336,5 +336,5 @@ export default prefixary("vue", {
 
     // Useless in Vue 3
     "v-if-else-key": "off",
-    "valid-v-is": "off"
+    "valid-v-is": "off",
 });

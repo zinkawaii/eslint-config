@@ -18,16 +18,16 @@ export default prefixary({
             ["parent", "sibling", "index"],
             ["parent-type", "sibling-type", "index-type"],
             "object",
-            "unknown"
+            "unknown",
         ],
         internalPattern: [
             "#.*",
             "@/.*",
             "@@/.*",
             "~/.*",
-            "~~/.*"
+            "~~/.*",
         ],
-        newlinesBetween: "never"
+        newlinesBetween: "never",
     }],
     "ts/no-empty-object-type": "off",
     "ts/no-redeclare": "warn",
@@ -36,6 +36,6 @@ export default prefixary({
     "unicorn/consistent-function-scoping": "off",
     "unused-imports/no-unused-vars": "off",
     "yaml/quotes": ["warn", {
-        prefer: "double"
-    }]
+        prefer: "double",
+    }],
 });

@@ -15,13 +15,13 @@ export default prefixary({
     "default-case-last": "warn",
     "default-param-last": "warn",
     "dot-notation": ["warn", {
-        allowPattern: "^[a-z]+(_[a-z]+)+$"
+        allowPattern: "^[a-z]+(_[a-z]+)+$",
     }],
     "eqeqeq": ["warn", "smart"],
     "func-name-matching": "off",
     "func-names": "off",
     "func-style": ["warn", "declaration", {
-        allowArrowFunctions: true
+        allowArrowFunctions: true,
     }],
     "grouped-accessor-pairs": "off",
     "guard-for-in": "off",
@@ -99,7 +99,7 @@ export default prefixary({
     "no-underscore-dangle": "off",
     "no-unmodified-loop-condition": "warn",
     "no-unneeded-ternary": ["warn", {
-        defaultAssignment: false
+        defaultAssignment: false,
     }],
     "no-unreachable-loop": "warn",
     "no-unused-expressions": "off",
@@ -117,16 +117,16 @@ export default prefixary({
     "no-warning-comments": "off",
     "object-shorthand": ["warn", "methods"],
     "one-var": ["warn", {
-        initialized: "never"
+        initialized: "never",
     }],
     "operator-assignment": ["warn", "always"],
     "prefer-arrow-callback": ["warn", {
         allowNamedFunctions: false,
-        allowUnboundThis: true
+        allowUnboundThis: true,
     }],
     "prefer-const": ["warn", {
         destructuring: "all",
-        ignoreReadBeforeAssign: false
+        ignoreReadBeforeAssign: false,
     }],
     "prefer-destructuring": "off",
     "prefer-exponentiation-operator": "warn",
@@ -136,7 +136,7 @@ export default prefixary({
     "prefer-object-spread": "warn",
     "prefer-promise-reject-errors": "warn",
     "prefer-regex-literals": ["warn", {
-        disallowRedundantWrapping: true
+        disallowRedundantWrapping: true,
     }],
     "prefer-rest-params": "warn",
     "prefer-spread": "warn",
@@ -152,6 +152,6 @@ export default prefixary({
     "symbol-description": "off",
     "vars-on-top": "warn",
     "yoda": ["warn", "never", {
-        exceptRange: true
-    }]
+        exceptRange: true,
+    }],
 });

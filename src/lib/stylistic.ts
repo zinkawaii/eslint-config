@@ -7,35 +7,36 @@ export default prefixary("style", {
     "arrow-parens": ["warn", "always"],
     "arrow-spacing": ["warn", {
         before: true,
-        after: true
+        after: true,
     }],
     "block-spacing": ["warn", "always"],
     "brace-style": ["warn", "stroustrup"],
-    "comma-dangle": ["warn", "never"],
+    "comma-dangle": ["warn", "always-multiline"],
     "comma-spacing": ["warn", {
         before: false,
-        after: true
+        after: true,
     }],
     "comma-style": ["warn", "last"],
     "computed-property-spacing": ["warn", "never"],
+    "curly-newline": "off",
     "dot-location": ["warn", "property"],
-    "eol-last": ["warn", "never"],
+    "eol-last": ["warn", "always"],
     "function-call-argument-newline": ["warn", "consistent"],
     "function-call-spacing": ["warn", "never"],
     "function-paren-newline": ["warn", "consistent"],
     "generator-star-spacing": ["warn", {
         named: {
             before: false,
-            after: true
+            after: true,
         },
         anonymous: {
             before: true,
-            after: false
+            after: false,
         },
         method: {
             before: true,
-            after: true
-        }
+            after: true,
+        },
     }],
     "implicit-arrow-linebreak": ["warn", "beside"],
     "indent": "off",
@@ -43,25 +44,25 @@ export default prefixary("style", {
     "key-spacing": ["warn", {
         beforeColon: false,
         afterColon: true,
-        mode: "strict"
+        mode: "strict",
     }],
     "keyword-spacing": ["warn", {
         before: true,
-        after: true
+        after: true,
     }],
     "line-comment-position": "off",
     "linebreak-style": ["warn", "unix"],
     "lines-around-comment": "off",
     "lines-between-class-members": ["warn", "always", {
-        exceptAfterSingleLine: true
+        exceptAfterSingleLine: true,
     }],
     "max-len": "off",
     "max-statements-per-line": "off",
     "member-delimiter-style": ["warn", {
         multiline: {
             delimiter: "semi",
-            requireLast: true
-        }
+            requireLast: true,
+        },
     }],
     "multiline-comment-style": "off",
     "multiline-ternary": "off",
@@ -74,10 +75,10 @@ export default prefixary("style", {
     "no-mixed-operators": "off",
     "no-mixed-spaces-and-tabs": "warn",
     "no-multi-spaces": ["warn", {
-        ignoreEOLComments: true
+        ignoreEOLComments: true,
     }],
     "no-multiple-empty-lines": ["warn", {
-        max: 1
+        max: 1,
     }],
     "no-tabs": "warn",
     "no-trailing-spaces": "warn",
@@ -86,7 +87,7 @@ export default prefixary("style", {
     "object-curly-newline": "warn",
     "object-curly-spacing": ["warn", "always"],
     "object-property-newline": ["warn", {
-        allowAllPropertiesOnSameLine: true
+        allowAllPropertiesOnSameLine: true,
     }],
     "one-var-declaration-per-line": "off",
     "operator-linebreak": "off",
@@ -94,20 +95,20 @@ export default prefixary("style", {
     "padding-line-between-statements": "off",
     "quote-props": ["warn", "as-needed"],
     "quotes": ["warn", "double", {
-        allowTemplateLiterals: true
+        allowTemplateLiterals: true,
     }],
     "rest-spread-spacing": ["warn", "never"],
     "semi": ["warn", "always"],
     "semi-spacing": ["warn", {
         before: false,
-        after: true
+        after: true,
     }],
     "semi-style": ["warn", "last"],
     "space-before-blocks": ["warn", "always"],
     "space-before-function-paren": ["warn", {
         named: "never",
         anonymous: "never",
-        asyncArrow: "always"
+        asyncArrow: "always",
     }],
     "space-in-parens": ["warn", "never"],
     "space-infix-ops": "warn",
@@ -115,7 +116,7 @@ export default prefixary("style", {
     "spaced-comment": "off",
     "switch-colon-spacing": ["warn", {
         before: false,
-        after: true
+        after: true,
     }],
     "template-curly-spacing": ["warn", "never"],
     "template-tag-spacing": ["warn", "never"],
@@ -124,15 +125,15 @@ export default prefixary("style", {
         after: true,
         overrides: {
             arrow: {
-                before: true
-            }
-        }
+                before: true,
+            },
+        },
     }],
     "type-generic-spacing": "warn",
     "type-named-tuple-spacing": "warn",
     "wrap-iife": ["warn", "inside", {
-        functionPrototypeMethods: true
+        functionPrototypeMethods: true,
     }],
     "wrap-regex": "off",
-    "yield-star-spacing": ["warn", "after"]
+    "yield-star-spacing": ["warn", "after"],
 });

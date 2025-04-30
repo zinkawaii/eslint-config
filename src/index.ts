@@ -9,5 +9,5 @@ export default {
     recommended,
     standard,
     stylistic,
-    vue
+    vue,
 };
