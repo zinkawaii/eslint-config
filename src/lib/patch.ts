@@ -31,9 +31,10 @@ export default prefixary({
     }],
     "ts/no-empty-object-type": "off",
     "ts/no-redeclare": "warn",
+    "ts/no-unsafe-declaration-merging": "off",
     "ts/no-unused-expressions": "off",
-    "unicorn/no-new-array": "off",
     "unicorn/consistent-function-scoping": "off",
+    "unicorn/no-new-array": "off",
     "unused-imports/no-unused-vars": "off",
     "yaml/quotes": ["warn", {
         prefer: "double",

@@ -95,7 +95,7 @@ export default prefixary("style", {
     "padding-line-between-statements": "off",
     "quote-props": ["warn", "as-needed"],
     "quotes": ["warn", "double", {
-        allowTemplateLiterals: true,
+        allowTemplateLiterals: "always",
     }],
     "rest-spread-spacing": ["warn", "never"],
     "semi": ["warn", "always"],
