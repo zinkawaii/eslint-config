@@ -2,7 +2,7 @@
   "name": "@zinkawaii/eslint-config",
   "type": "module",
   "version": "0.3.0",
-  "packageManager": "pnpm@10.10.0",
+  "packageManager": "pnpm@10.14.0",
   "description": "Utakata na Shiawase",
   "author": "KazariEX",
   "license": "MIT",
@@ -23,16 +23,10 @@
     "release": "bumpp --no-push -c \"release: v%s\""
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.12.0",
-    "@zinkawaii/tsconfig": "^0.0.1",
-    "bumpp": "^10.1.0",
-    "eslint": "^9.25.1",
-    "tsdown": "^0.10.2"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "rolldown",
-      "unrs-resolver"
-    ]
+    "@antfu/eslint-config": "catalog:",
+    "@zinkawaii/tsconfig": "catalog:",
+    "bumpp": "catalog:",
+    "eslint": "catalog:",
+    "tsdown": "catalog:"
   }
 }

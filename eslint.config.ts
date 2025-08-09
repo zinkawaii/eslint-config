@@ -2,7 +2,7 @@ import antfu from "@antfu/eslint-config";
 import zin from "./src";
 
 export default antfu({
-    markdown: false,
+    pnpm: true,
     rules: {
         ...zin.standard,
         ...zin.recommended,
