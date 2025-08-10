@@ -125,18 +125,18 @@ export default <Rules> {
     // Priority C
     "vue/attributes-order": ["warn", {
         order: [
-            "vue/LIST_RENDERING",
-            "vue/CONDITIONALS",
-            "vue/RENDER_MODIFIERS",
-            "vue/OTHER_DIRECTIVES",
-            "vue/SLOT",
-            "vue/DEFINITION",
-            "vue/UNIQUE",
-            "vue/GLOBAL",
+            "LIST_RENDERING",
+            "CONDITIONALS",
+            "RENDER_MODIFIERS",
+            "OTHER_DIRECTIVES",
+            "SLOT",
+            "DEFINITION",
+            "UNIQUE",
+            "GLOBAL",
             ["ATTR_DYNAMIC", "ATTR_STATIC", "ATTR_SHORTHAND_BOOL"],
-            "vue/TWO_WAY_BINDING",
-            "vue/EVENTS",
-            "vue/CONTENT",
+            "TWO_WAY_BINDING",
+            "EVENTS",
+            "CONTENT",
         ],
     }],
     "vue/no-lone-template": "warn",
@@ -147,9 +147,9 @@ export default <Rules> {
     // Uncategorized
     "vue/block-order": ["warn", {
         order: [
-            "vue/script",
-            "vue/template",
-            "vue/style",
+            "script",
+            "template",
+            "style",
         ],
     }],
     "vue/block-tag-newline": ["warn", {
@@ -169,11 +169,11 @@ export default <Rules> {
     "vue/define-emits-declaration": ["warn", "type-literal"],
     "vue/define-macros-order": ["warn", {
         order: [
-            "vue/defineOptions",
-            "vue/defineProps",
-            "vue/defineModel",
-            "vue/defineEmits",
-            "vue/defineSlots",
+            "defineOptions",
+            "defineProps",
+            "defineModel",
+            "defineEmits",
+            "defineSlots",
         ],
         defineExposeLast: true,
     }],
