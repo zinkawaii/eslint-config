@@ -1,13 +1,43 @@
-import patch from "./lib/patch";
-import recommended from "./lib/recommended";
-import standard from "./lib/standard";
-import stylistic from "./lib/stylistic";
-import vue from "./lib/vue";
+import antfu, { type TypedFlatConfigItem } from "@antfu/eslint-config";
+import configJavascript from "./configs/javascript";
+import configMisc from "./configs/misc";
+import configStylistic from "./configs/stylistic";
+import rulesVue from "./rules/vue";
 
-export default {
-    patch,
-    recommended,
-    standard,
-    stylistic,
-    vue,
-};
+const fusedProps = [
+    "name",
+    "languageOptions",
+    "linterOptions",
+    "processor",
+    "plugins",
+    "rules",
+    "settings",
+] as const;
+
+export function zin(...[options = {}, ...userConfigs]: Parameters<typeof antfu>): ReturnType<typeof antfu> {
+    const configFused = fusedProps.reduce((acc, key) => {
+        if (key in options) {
+            acc[key] = options[key] as any;
+            delete options[key];
+        }
+        return acc;
+    }, {} as TypedFlatConfigItem);
+
+    const vue = options.vue === false || typeof options.vue === "object"
+        ? options.vue
+        : {};
+
+    return antfu({
+        pnpm: true,
+        ...options,
+        vue: vue && {
+            ...vue,
+            overrides: {
+                ...rulesVue,
+                ...vue.overrides,
+            },
+        },
+    }, configJavascript, configMisc, configStylistic, configFused, ...userConfigs);
+}
+
+export default zin;

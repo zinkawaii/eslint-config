@@ -1,13 +1,7 @@
-import antfu from "@antfu/eslint-config";
 import zin from "./src";
 
-export default antfu({
-    pnpm: true,
+export default zin({
     rules: {
-        ...zin.standard,
-        ...zin.recommended,
-        ...zin.stylistic,
-        ...zin.patch,
         "style/quote-props": ["warn", "consistent"],
     },
 });

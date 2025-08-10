@@ -22,8 +22,10 @@
     "prepack": "pnpm run build",
     "release": "bumpp --no-push -c \"release: v%s\""
   },
+  "dependencies": {
+    "@antfu/eslint-config": "catalog:"
+  },
   "devDependencies": {
-    "@antfu/eslint-config": "catalog:",
     "@zinkawaii/tsconfig": "catalog:",
     "bumpp": "catalog:",
     "eslint": "catalog:",

@@ -1,0 +1,142 @@
+import type { TypedFlatConfigItem } from "@antfu/eslint-config";
+
+export default <TypedFlatConfigItem> {
+    name: "zin/stylistic/rules",
+    rules: {
+        "style/array-bracket-newline": ["warn", "consistent"],
+        "style/array-bracket-spacing": ["warn", "never"],
+        "style/array-element-newline": ["warn", "consistent"],
+        "style/arrow-parens": ["warn", "always"],
+        "style/arrow-spacing": ["warn", {
+            before: true,
+            after: true,
+        }],
+        "style/block-spacing": ["warn", "always"],
+        "style/brace-style": ["warn", "stroustrup"],
+        "style/comma-dangle": ["warn", "always-multiline"],
+        "style/comma-spacing": ["warn", {
+            before: false,
+            after: true,
+        }],
+        "style/comma-style": ["warn", "last"],
+        "style/computed-property-spacing": ["warn", "never"],
+        "style/curly-newline": "off",
+        "style/dot-location": ["warn", "property"],
+        "style/eol-last": ["warn", "always"],
+        "style/function-call-argument-newline": ["warn", "consistent"],
+        "style/function-call-spacing": ["warn", "never"],
+        "style/function-paren-newline": ["warn", "consistent"],
+        "style/generator-star-spacing": ["warn", {
+            named: {
+                before: false,
+                after: true,
+            },
+            anonymous: {
+                before: true,
+                after: false,
+            },
+            method: {
+                before: true,
+                after: true,
+            },
+        }],
+        "style/implicit-arrow-linebreak": ["warn", "beside"],
+        "style/indent": "off",
+        "style/indent-binary-ops": "off",
+        "style/key-spacing": ["warn", {
+            beforeColon: false,
+            afterColon: true,
+            mode: "strict",
+        }],
+        "style/keyword-spacing": ["warn", {
+            before: true,
+            after: true,
+        }],
+        "style/line-comment-position": "off",
+        "style/linebreak-style": ["warn", "unix"],
+        "style/lines-around-comment": "off",
+        "style/lines-between-class-members": ["warn", "always", {
+            exceptAfterSingleLine: true,
+        }],
+        "style/max-len": "off",
+        "style/max-statements-per-line": "off",
+        "style/member-delimiter-style": ["warn", {
+            multiline: {
+                delimiter: "semi",
+                requireLast: true,
+            },
+        }],
+        "style/multiline-comment-style": "off",
+        "style/multiline-ternary": "off",
+        "style/new-parens": "warn",
+        "style/newline-per-chained-call": "off",
+        "style/no-confusing-arrow": "warn",
+        "style/no-extra-parens": ["warn", "functions"],
+        "style/no-extra-semi": "warn",
+        "style/no-floating-decimal": "warn",
+        "style/no-mixed-operators": "off",
+        "style/no-mixed-spaces-and-tabs": "warn",
+        "style/no-multi-spaces": ["warn", {
+            ignoreEOLComments: true,
+        }],
+        "style/no-multiple-empty-lines": ["warn", {
+            max: 1,
+        }],
+        "style/no-tabs": "warn",
+        "style/no-trailing-spaces": "warn",
+        "style/no-whitespace-before-property": "warn",
+        "style/nonblock-statement-body-position": ["warn", "beside"],
+        "style/object-curly-newline": "warn",
+        "style/object-curly-spacing": ["warn", "always"],
+        "style/object-property-newline": ["warn", {
+            allowAllPropertiesOnSameLine: true,
+        }],
+        "style/one-var-declaration-per-line": "off",
+        "style/operator-linebreak": "off",
+        "style/padded-blocks": ["warn", "never"],
+        "style/padding-line-between-statements": "off",
+        "style/quote-props": ["warn", "as-needed"],
+        "style/quotes": ["warn", "double", {
+            allowTemplateLiterals: "always",
+        }],
+        "style/rest-spread-spacing": ["warn", "never"],
+        "style/semi": ["warn", "always"],
+        "style/semi-spacing": ["warn", {
+            before: false,
+            after: true,
+        }],
+        "style/semi-style": ["warn", "last"],
+        "style/space-before-blocks": ["warn", "always"],
+        "style/space-before-function-paren": ["warn", {
+            named: "never",
+            anonymous: "never",
+            asyncArrow: "always",
+        }],
+        "style/space-in-parens": ["warn", "never"],
+        "style/space-infix-ops": "warn",
+        "style/space-unary-ops": "warn",
+        "style/spaced-comment": "off",
+        "style/switch-colon-spacing": ["warn", {
+            before: false,
+            after: true,
+        }],
+        "style/template-curly-spacing": ["warn", "never"],
+        "style/template-tag-spacing": ["warn", "never"],
+        "style/type-annotation-spacing": ["warn", {
+            before: false,
+            after: true,
+            overrides: {
+                arrow: {
+                    before: true,
+                },
+            },
+        }],
+        "style/type-generic-spacing": "warn",
+        "style/type-named-tuple-spacing": "warn",
+        "style/wrap-iife": ["warn", "inside", {
+            functionPrototypeMethods: true,
+        }],
+        "style/wrap-regex": "off",
+        "style/yield-star-spacing": ["warn", "after"],
+    },
+};
