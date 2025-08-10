@@ -14,7 +14,7 @@ const fusedProps = [
     "settings",
 ] as const;
 
-export function zin(...[options = {}, ...userConfigs]: Parameters<typeof antfu>): ReturnType<typeof antfu> {
+export const zin: typeof antfu = (...[options = {}, ...userConfigs]) => {
     const configFused = fusedProps.reduce((acc, key) => {
         if (key in options) {
             acc[key] = options[key] as any;
@@ -38,6 +38,6 @@ export function zin(...[options = {}, ...userConfigs]: Parameters<typeof antfu>)
             },
         },
     }, configJavascript, configMisc, configStylistic, configFused, ...userConfigs);
-}
+};
 
 export default zin;
