@@ -1,7 +1,7 @@
 {
   "name": "@zinkawaii/eslint-config",
   "type": "module",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "packageManager": "pnpm@10.14.0",
   "description": "Utakata na Shiawase",
   "author": "KazariEX",
