@@ -14,7 +14,7 @@ const fusedProps = [
     "settings",
 ] as const;
 
-export const zin: typeof antfu = (...[options = {}, ...userConfigs]) => {
+export const zin: typeof antfu = (options = {}, ...userConfigs) => {
     const configFused = fusedProps.reduce((acc, key) => {
         if (key in options) {
             acc[key] = options[key] as any;
