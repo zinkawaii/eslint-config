@@ -1,12 +1,10 @@
-catalog:
-  '@antfu/eslint-config': ^5.2.0
-  '@zinkawaii/tsconfig': ^0.0.2
-  bumpp: ^10.2.2
-  eslint: ^9.33.0
-  tsdown: ^0.14.0
-
-onlyBuiltDependencies:
-  - rolldown
-  - unrs-resolver
-
 shamefullyHoist: true
+shellEmulator: true
+trustPolicy: no-downgrade
+
+catalog:
+  "@antfu/eslint-config": ^7.2.0
+  "@zinkawaii/tsconfig": ^0.0.2
+  bumpp: ^10.4.0
+  eslint: ^9.39.2
+  tsdown: ^0.20.1
