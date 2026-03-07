@@ -7,6 +7,7 @@ export default <TypedFlatConfigItem> {
         "antfu/if-newline": "off",
         "antfu/no-top-level-await": "off",
         "antfu/top-level-function": "off",
+        "e18e/prefer-static-regex": "off",
         "import/consistent-type-specifier-style": "off",
         "node/prefer-global/process": "off",
         "perfectionist/sort-imports": ["warn", {
