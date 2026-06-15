@@ -5,39 +5,45 @@ import configStylistic from "./configs/stylistic";
 import rulesVue from "./rules/vue";
 
 const fusedProps = [
-    "name",
-    "languageOptions",
-    "linterOptions",
-    "processor",
-    "plugins",
-    "rules",
-    "settings",
+  "name",
+  "languageOptions",
+  "linterOptions",
+  "processor",
+  "plugins",
+  "rules",
+  "settings",
 ] as const;
 
 export const zin: typeof antfu = (options = {}, ...userConfigs) => {
-    const configFused = fusedProps.reduce((acc, key) => {
-        if (key in options) {
-            acc[key] = options[key] as any;
-            delete options[key];
-        }
-        return acc;
-    }, {} as TypedFlatConfigItem);
+  const configFused = fusedProps.reduce((acc, key) => {
+    if (key in options) {
+      acc[key] = options[key] as any;
+      delete options[key];
+    }
+    return acc;
+  }, {} as TypedFlatConfigItem);
 
-    const vue = options.vue === false || typeof options.vue === "object"
-        ? options.vue
-        : {};
+  const vue = options.vue === false || typeof options.vue === "object"
+    ? options.vue
+    : {};
 
-    return antfu({
-        pnpm: true,
-        ...options,
-        vue: vue && {
-            ...vue,
-            overrides: {
-                ...rulesVue,
-                ...vue.overrides,
-            },
-        },
-    }, configJavascript, configMisc, configStylistic, configFused, ...userConfigs);
+  return antfu({
+    pnpm: true,
+    ...options,
+    vue: vue && {
+      ...vue,
+      overrides: {
+        ...rulesVue,
+        ...vue.overrides,
+      },
+    },
+  }, configJavascript, configMisc, configStylistic, configFused, ...userConfigs)
+    .append({
+      files: ["*.vue"],
+      rules: {
+        "style/indent": "off",
+      },
+    });
 };
 
 export default zin;
