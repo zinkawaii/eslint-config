@@ -2,7 +2,7 @@
   "name": "@zinkawaii/eslint-config",
   "type": "module",
   "version": "0.4.3",
-  "packageManager": "pnpm@10.30.3",
+  "packageManager": "pnpm@11.6.0",
   "description": "Utakata na Shiawase",
   "author": "KazariEX",
   "license": "MIT",
@@ -11,7 +11,7 @@
     ".": "./dist/index.mjs",
     "./package.json": "./package.json"
   },
-  "types": "./dist/index.d.ts",
+  "types": "./dist/index.d.mts",
   "files": [
     "dist"
   ],

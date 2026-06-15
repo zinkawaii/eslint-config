@@ -3,8 +3,8 @@ shellEmulator: true
 trustPolicy: no-downgrade
 
 catalog:
-  "@antfu/eslint-config": ^7.7.0
-  "@zinkawaii/tsconfig": ^0.0.2
-  bumpp: ^10.4.1
-  eslint: ^10.0.3
-  tsdown: ^0.21.0
+  "@antfu/eslint-config": ^9.0.0
+  "@zinkawaii/tsconfig": ^0.1.0
+  bumpp: ^11.1.0
+  eslint: ^10.5.0
+  tsdown: ^0.22.2
