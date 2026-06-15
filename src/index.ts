@@ -37,13 +37,12 @@ export const zin: typeof antfu = (options = {}, ...userConfigs) => {
         ...vue.overrides,
       },
     },
-  }, configJavascript, configMisc, configStylistic, configFused, ...userConfigs)
-    .append({
-      files: ["*.vue"],
-      rules: {
-        "style/indent": "off",
-      },
-    });
+  }, configJavascript, configMisc, configStylistic, configFused, {
+    files: ["**/*.vue"],
+    rules: {
+      "style/indent": "off",
+    },
+  }, ...userConfigs);
 };
 
 export default zin;
