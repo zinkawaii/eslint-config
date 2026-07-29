@@ -2,6 +2,9 @@ shamefullyHoist: true
 shellEmulator: true
 trustPolicy: no-downgrade
 
+patchedDependencies:
+  "@antfu/eslint-config": patches/@antfu__eslint-config.patch
+
 catalog:
   "@antfu/eslint-config": ^9.0.0
   "@zinkawaii/tsconfig": ^0.1.0
