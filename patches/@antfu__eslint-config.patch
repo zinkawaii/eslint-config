@@ -1,5 +1,5 @@
 diff --git a/dist/index.mjs b/dist/index.mjs
-index 061a923bc28bec9066216a7d581ecc70321ffbea..27feb4bc549a34e31e8a6f9afc1b4b42a68bd376 100644
+index 4fee2be6b8df63bb71594290a2e113b40aaeed60..9493a1368ecbdd38cfbb3bf88ea918eb4fbd94e4 100644
 --- a/dist/index.mjs
 +++ b/dist/index.mjs
 @@ -12,7 +12,6 @@ import pluginAntfu from "eslint-plugin-antfu";
@@ -10,16 +10,16 @@ index 061a923bc28bec9066216a7d581ecc70321ffbea..27feb4bc549a34e31e8a6f9afc1b4b42
  import pluginUnusedImports from "eslint-plugin-unused-imports";
  import globals from "globals";
  import { mergeProcessors, processorPassThrough } from "eslint-merge-processors";
-@@ -2001,7 +2000,7 @@ async function typescript(options = {}) {
+@@ -2004,7 +2003,7 @@ async function typescript(options = {}) {
  		}] : [],
  		...erasableOnly ? [{
  			name: "antfu/typescript/erasable-syntax-only",
--			plugins: { "erasable-syntax-only": await interopDefault(import("./lib-C1Uxp5ZW.mjs")) },
+-			plugins: { "erasable-syntax-only": await interopDefault(import("./lib-BGCOhS6c.mjs")) },
 +			plugins: { "erasable-syntax-only": await interopDefault(import("eslint-plugin-erasable-syntax-only")) },
  			rules: {
  				"erasable-syntax-only/enums": "error",
  				"erasable-syntax-only/import-aliases": "error",
-@@ -2398,7 +2397,6 @@ function antfu(options = {}, ...userConfigs) {
+@@ -2405,7 +2404,6 @@ function antfu(options = {}, ...userConfigs) {
  		isInEditor,
  		...enableE18e === true ? {} : enableE18e
  	}));
@@ -28,14 +28,14 @@ index 061a923bc28bec9066216a7d581ecc70321ffbea..27feb4bc549a34e31e8a6f9afc1b4b42
  	if (enableJsx) configs.push(jsx(enableJsx === true ? {} : enableJsx));
  	if (enableTypeScript) configs.push(typescript({
 diff --git a/package.json b/package.json
-index aa273f0beded46603b1aac91ae27cb7875406627..a847c9c73b3fd96e5956ae090e157285dbe6d099 100644
+index 2b2c08f43e9ce9678143fce3441a04414ea81bdd..d9ba31304c6fa394d4aec69089cf05c26eeb76a7 100644
 --- a/package.json
 +++ b/package.json
-@@ -131,7 +131,6 @@
-     "eslint-plugin-pnpm": "^1.6.0",
-     "eslint-plugin-regexp": "^3.1.0",
-     "eslint-plugin-toml": "^1.3.1",
--    "eslint-plugin-unicorn": "^64.0.0",
+@@ -130,7 +130,6 @@
+     "eslint-plugin-pnpm": "^1.6.1",
+     "eslint-plugin-regexp": "^3.1.1",
+     "eslint-plugin-toml": "^1.4.0",
+-    "eslint-plugin-unicorn": "^72.0.0",
      "eslint-plugin-unused-imports": "^4.4.1",
-     "eslint-plugin-vue": "^10.9.1",
-     "eslint-plugin-yml": "^3.3.2",
+     "eslint-plugin-vue": "^10.10.0",
+     "eslint-plugin-yml": "^3.6.0",

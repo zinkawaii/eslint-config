@@ -1,16 +1,12 @@
-name: publish
+name: check-props
 
 on:
   workflow_dispatch:
-  push:
-    tags:
-      - "*"
-
-permissions:
-  id-token: write
+  schedule:
+    - cron: 0 0 * * *
 
 jobs:
-  publish:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
@@ -25,8 +21,8 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
 
-      - name: Build
-        run: pnpm run build
+      - name: Update Data
+        run: pnpm i known-css-properties@latest
 
-      - name: Publish
-        run: pnpm -r publish --no-git-checks
+      - name: Check Props
+        run: pnpm vitest -r packages/css props.test.ts

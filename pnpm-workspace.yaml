@@ -1,13 +1,23 @@
+minimumReleaseAge: 0
 shamefullyHoist: true
 shellEmulator: true
 trustPolicy: no-downgrade
+
+packages:
+  - packages/*
 
 patchedDependencies:
   "@antfu/eslint-config": patches/@antfu__eslint-config.patch
 
 catalog:
-  "@antfu/eslint-config": ^9.0.0
+  "@antfu/eslint-config": ^9.2.0
+  "@eslint/config-helpers": ^0.7.0
+  "@eslint/css": ^1.4.0
   "@zinkawaii/tsconfig": ^0.1.0
-  bumpp: ^11.1.0
-  eslint: ^10.5.0
-  tsdown: ^0.22.2
+  bumpp: ^12.0.0
+  eslint: ^10.8.0
+  eslint-plugin-css-properties-order: ^0.0.1
+  eslint-plugin-css-stylistic: ^0.0.1
+  known-css-properties: ^0.37.0
+  tsdown: ^0.22.14
+  vitest: ^4.1.10

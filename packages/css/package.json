@@ -1,0 +1,32 @@
+{
+  "name": "@zinkawaii/eslint-config-css",
+  "type": "module",
+  "version": "0.4.5",
+  "description": "Utakata na Shiawase",
+  "author": "KazariEX",
+  "license": "MIT",
+  "repository": "zinkawaii/eslint-config",
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "types": "./dist/index.d.mts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown -w",
+    "prepack": "pnpm run build",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@eslint/config-helpers": "catalog:",
+    "@eslint/css": "catalog:",
+    "eslint-plugin-css-properties-order": "catalog:",
+    "eslint-plugin-css-stylistic": "catalog:"
+  },
+  "devDependencies": {
+    "known-css-properties": "catalog:"
+  }
+}

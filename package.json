@@ -1,31 +1,18 @@
 {
-  "name": "@zinkawaii/eslint-config",
   "type": "module",
-  "version": "0.4.5",
-  "packageManager": "pnpm@11.6.0",
-  "description": "Utakata na Shiawase",
-  "author": "KazariEX",
-  "license": "MIT",
-  "repository": "zinkawaii/eslint-config",
-  "exports": {
-    ".": "./dist/index.mjs",
-    "./package.json": "./package.json"
-  },
-  "types": "./dist/index.d.mts",
-  "files": [
-    "dist"
-  ],
+  "private": true,
+  "packageManager": "pnpm@11.17.0",
   "scripts": {
-    "build": "tsdown",
-    "dev": "tsdown -w",
-    "prepack": "pnpm run build",
-    "release": "bumpp --no-push -c \"release: v%s\""
+    "build": "pnpm -r build",
+    "dev": "pnpm -r --parallel dev",
+    "release": "bumpp -r --no-push -c \"release: v%s\""
   },
   "devDependencies": {
     "@antfu/eslint-config": "catalog:",
     "@zinkawaii/tsconfig": "catalog:",
     "bumpp": "catalog:",
     "eslint": "catalog:",
-    "tsdown": "catalog:"
+    "tsdown": "catalog:",
+    "vitest": "catalog:"
   }
 }
