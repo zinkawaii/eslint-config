@@ -538,6 +538,7 @@ export const orders = [
 ];
 
 export default <ConfigObject> {
+  name: "zin/css/order",
   files: [
     "**/*.css",
   ],

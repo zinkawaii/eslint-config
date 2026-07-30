@@ -2,6 +2,7 @@ import stylistic from "eslint-plugin-css-stylistic";
 import type { ConfigObject } from "@eslint/config-helpers";
 
 export default <ConfigObject> {
+  name: "zin/css/stylistic",
   files: [
     "**/*.css",
   ],
@@ -36,13 +37,9 @@ export default <ConfigObject> {
     "css-stylistic/function-parentheses-newline-inside": ["warn", "always-multi-line"],
     "css-stylistic/function-parentheses-space-inside": ["warn", "never-single-line"],
     "css-stylistic/function-whitespace-after": ["warn", "always"],
-    "css-stylistic/indentation": [
-      "warn",
-      2,
-      {
-        baseIndentLevel: "auto",
-      },
-    ],
+    "css-stylistic/indentation": ["warn", 2, {
+      baseIndentLevel: "auto",
+    }],
     "css-stylistic/linebreaks": ["warn", "unix"],
     "css-stylistic/media-feature-colon-space-after": ["warn", "always"],
     "css-stylistic/media-feature-colon-space-before": ["warn", "never"],
