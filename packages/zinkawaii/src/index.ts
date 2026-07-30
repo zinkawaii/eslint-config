@@ -4,6 +4,8 @@ import configMisc from "./configs/misc";
 import configStylistic from "./configs/stylistic";
 import rulesVue from "./rules/vue";
 
+export * from "@antfu/eslint-config";
+
 const fusedProps = [
   "name",
   "languageOptions",

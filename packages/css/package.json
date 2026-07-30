@@ -18,7 +18,12 @@
     "build": "tsdown",
     "dev": "tsdown -w",
     "prepack": "pnpm run build",
-    "test": "vitest"
+    "prepare": "pnpm run typegen",
+    "test": "vitest",
+    "typegen": "unrun scripts/typegen.ts"
+  },
+  "peerDependencies": {
+    "eslint": ">=10.0.0"
   },
   "dependencies": {
     "@eslint/config-helpers": "catalog:",
@@ -27,6 +32,8 @@
     "eslint-plugin-css-stylistic": "catalog:"
   },
   "devDependencies": {
+    "@zinkawaii/eslint-config": "workspace:",
+    "eslint-typegen": "catalog:",
     "known-css-properties": "catalog:"
   }
 }

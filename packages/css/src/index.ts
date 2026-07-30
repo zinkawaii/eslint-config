@@ -1,7 +1,21 @@
 import css from "@eslint/css";
-import type { ConfigObject, ConfigWithExtends } from "@eslint/config-helpers";
+import type { ConfigWithExtends } from "@eslint/config-helpers";
 import order from "./rules/order";
 import stylistic from "./rules/stylistic";
+import type { CssRuleOptions } from "./typegen";
+
+declare module "@eslint/core" {
+  interface RulesConfig extends CssRuleOptions {}
+}
+
+declare module "@antfu/eslint-config" {
+  interface RuleOptions extends CssRuleOptions {}
+}
+
+// @ts-expect-error omit <reference ... />
+declare module "@zinkawaii/eslint-config" {
+  interface RuleOptions extends CssRuleOptions {}
+}
 
 const setup: ConfigWithExtends = {
   name: "zin/css/setup",
@@ -21,8 +35,4 @@ const setup: ConfigWithExtends = {
   },
 };
 
-export default <(ConfigWithExtends | ConfigObject)[]> [
-  setup,
-  order,
-  stylistic,
-];
+export default [setup, order, stylistic];

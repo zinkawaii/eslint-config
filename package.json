@@ -9,10 +9,12 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "catalog:",
+    "@types/node": "catalog:",
     "@zinkawaii/tsconfig": "catalog:",
     "bumpp": "catalog:",
     "eslint": "catalog:",
     "tsdown": "catalog:",
+    "unrun": "catalog:",
     "vitest": "catalog:"
   }
 }

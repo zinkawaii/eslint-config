@@ -13,11 +13,14 @@ catalog:
   "@antfu/eslint-config": ^9.2.0
   "@eslint/config-helpers": ^0.7.0
   "@eslint/css": ^1.4.0
+  "@types/node": ^26.1.2
   "@zinkawaii/tsconfig": ^0.1.0
   bumpp: ^12.0.0
   eslint: ^10.8.0
   eslint-plugin-css-properties-order: ^0.0.1
-  eslint-plugin-css-stylistic: ^0.0.1
+  eslint-plugin-css-stylistic: ^0.0.2
+  eslint-typegen: ^2.3.1
   known-css-properties: ^0.37.0
   tsdown: ^0.22.14
+  unrun: ^0.3.1
   vitest: ^4.1.10
