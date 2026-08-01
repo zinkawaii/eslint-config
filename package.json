@@ -5,7 +5,8 @@
   "scripts": {
     "build": "pnpm -r build",
     "dev": "pnpm -r --parallel dev",
-    "release": "bumpp -r --no-push -c \"release: v%s\""
+    "release": "bumpp -r --no-push -c \"release: v%s\"",
+    "test": "vitest"
   },
   "devDependencies": {
     "@antfu/eslint-config": "catalog:",
