@@ -1,5 +1,6 @@
 import css from "@eslint/css";
 import { defineFlatConfig } from "eslint-flat-config-utils";
+import type { Linter } from "eslint";
 import order from "./rules/order";
 import stylistic from "./rules/stylistic";
 import type { CssRuleOptions } from "./typegen";
@@ -35,4 +36,8 @@ const setup = defineFlatConfig({
   },
 });
 
-export default [setup, order, stylistic].flat();
+export default <Linter.Config[]> [
+  setup,
+  order,
+  stylistic,
+];
