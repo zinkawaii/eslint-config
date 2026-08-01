@@ -1,4 +1,4 @@
-name: check-props
+name: check-deps
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
     - cron: 0 0 * * *
 
 jobs:
-  check-props:
+  check-deps:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
@@ -21,8 +21,8 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
 
-      - name: Update Data
-        run: pnpm i known-css-properties@latest
+      - name: Update Vendor
+        run: pnpm i @antfu/eslint-config@latest
 
-      - name: Check Props
-        run: pnpm vitest -r packages/css props.test.ts
+      - name: Check Dependencies
+        run: pnpm vitest -r packages/zinkawaii deps.test.ts

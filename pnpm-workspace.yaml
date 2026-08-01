@@ -11,16 +11,51 @@ patchedDependencies:
 
 catalog:
   "@antfu/eslint-config": ^9.2.0
+  "@antfu/install-pkg": ^1.1.0
+  "@clack/prompts": ^1.7.0
+  "@e18e/eslint-plugin": ^0.5.1
+  "@eslint-community/eslint-plugin-eslint-comments": ^4.7.2
   "@eslint/config-helpers": ^0.7.0
   "@eslint/css": ^1.4.0
+  "@eslint/markdown": ^8.0.3
+  "@stylistic/eslint-plugin": ^5.10.0
   "@types/node": ^26.1.2
+  "@typescript-eslint/eslint-plugin": ^8.65.0
+  "@typescript-eslint/parser": ^8.65.0
+  "@vitest/eslint-plugin": ^1.6.23
   "@zinkawaii/tsconfig": ^0.1.0
+  ansis: ^4.3.1
   bumpp: ^12.0.0
+  cac: ^7.0.0
   eslint: ^10.8.0
+  eslint-config-flat-gitignore: ^2.3.0
+  eslint-flat-config-utils: ^3.2.0
+  eslint-merge-processors: ^2.0.0
+  eslint-plugin-antfu: ^3.2.3
+  eslint-plugin-command: ^3.5.3
   eslint-plugin-css-properties-order: ^0.0.1
   eslint-plugin-css-stylistic: ^0.0.2
+  eslint-plugin-import-lite: ^0.6.0
+  eslint-plugin-jsdoc: ^63.2.0
+  eslint-plugin-jsonc: ^3.3.0
+  eslint-plugin-n: ^18.2.2
+  eslint-plugin-no-only-tests: ^3.4.0
+  eslint-plugin-perfectionist: ^5.10.0
+  eslint-plugin-pnpm: ^1.6.1
+  eslint-plugin-regexp: ^3.1.1
+  eslint-plugin-toml: ^1.4.0
+  eslint-plugin-unused-imports: ^4.4.1
+  eslint-plugin-vue: ^10.10.0
+  eslint-plugin-yml: ^3.6.0
+  eslint-processor-vue-blocks: ^2.0.0
   eslint-typegen: ^2.3.1
+  globals: ^17.7.0
   known-css-properties: ^0.37.0
+  local-pkg: ^1.2.1
+  parse-gitignore: ^2.0.0
+  toml-eslint-parser: ^1.0.3
   tsdown: ^0.22.14
   unrun: ^0.3.1
   vitest: ^4.1.10
+  vue-eslint-parser: ^10.4.1
+  yaml-eslint-parser: ^2.1.0
