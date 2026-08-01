@@ -1,5 +1,5 @@
+import { defineConfig } from "@eslint/config-helpers";
 import css from "@eslint/css";
-import type { ConfigWithExtends } from "@eslint/config-helpers";
 import order from "./rules/order";
 import stylistic from "./rules/stylistic";
 import type { CssRuleOptions } from "./typegen";
@@ -17,7 +17,7 @@ declare module "@zinkawaii/eslint-config" {
   interface RuleOptions extends CssRuleOptions {}
 }
 
-const setup: ConfigWithExtends = {
+const setup = defineConfig({
   name: "zin/css/setup",
   files: [
     "**/*.css",
@@ -33,6 +33,6 @@ const setup: ConfigWithExtends = {
     "css/use-baseline": "off",
     "css/no-invalid-properties": "off",
   },
-};
+});
 
-export default [setup, order, stylistic];
+export default [setup, order, stylistic].flat();

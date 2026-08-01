@@ -1,7 +1,7 @@
+import { defineConfig } from "@eslint/config-helpers";
 import stylistic from "eslint-plugin-css-stylistic";
-import type { ConfigObject } from "@eslint/config-helpers";
 
-export default <ConfigObject> {
+export default defineConfig({
   name: "zin/css/stylistic",
   files: [
     "**/*.css",
@@ -75,4 +75,4 @@ export default <ConfigObject> {
     "css-stylistic/value-list-comma-space-after": ["warn", "always-single-line"],
     "css-stylistic/value-list-comma-space-before": ["warn", "never"],
   },
-};
+});

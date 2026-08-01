@@ -1,5 +1,5 @@
+import { defineConfig } from "@eslint/config-helpers";
 import order from "eslint-plugin-css-properties-order";
-import type { ConfigObject } from "@eslint/config-helpers";
 
 export const orders = [
   "all",
@@ -537,7 +537,7 @@ export const orders = [
   "zoom",
 ];
 
-export default <ConfigObject> {
+export default defineConfig({
   name: "zin/css/order",
   files: [
     "**/*.css",
@@ -548,4 +548,4 @@ export default <ConfigObject> {
   rules: {
     "css-order/properties-order": ["warn", orders],
   },
-};
+});
