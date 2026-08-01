@@ -1,29 +1,15 @@
-import antfu, { type TypedFlatConfigItem } from "@antfu/eslint-config";
-import configJavascript from "./configs/javascript";
-import configMisc from "./configs/misc";
-import configStylistic from "./configs/stylistic";
+import antfu from "@antfu/eslint-config";
+import rulesJavascript from "./rules/javascript";
+import rulesMisc from "./rules/misc";
+import rulesStylistic from "./rules/stylistic";
 import rulesVue from "./rules/vue";
 
 export * from "@antfu/eslint-config";
 
-const fusedProps = [
-  "name",
-  "languageOptions",
-  "linterOptions",
-  "processor",
-  "plugins",
-  "rules",
-  "settings",
-] as const;
-
 export const zin: typeof antfu = (options = {}, ...userConfigs) => {
-  const configFused = fusedProps.reduce((acc, key) => {
-    if (key in options) {
-      acc[key] = options[key] as any;
-      delete options[key];
-    }
-    return acc;
-  }, {} as TypedFlatConfigItem);
+  const stylistic = options.stylistic === false || typeof options.stylistic === "object"
+    ? options.stylistic
+    : {};
 
   const vue = options.vue === false || typeof options.vue === "object"
     ? options.vue
@@ -32,17 +18,31 @@ export const zin: typeof antfu = (options = {}, ...userConfigs) => {
   return antfu({
     pnpm: true,
     ...options,
+    javascript: {
+      ...options.javascript,
+      overrides: {
+        ...rulesJavascript,
+        ...options.javascript?.overrides,
+      },
+    },
+    stylistic: stylistic && {
+      ...stylistic,
+      overrides: {
+        ...rulesStylistic,
+        ...stylistic.overrides,
+      },
+    },
     vue: vue && {
       ...vue,
       overrides: {
+        "style/indent": "off",
         ...rulesVue,
         ...vue.overrides,
       },
     },
-  }, configJavascript, configMisc, configStylistic, configFused, {
-    files: ["**/*.vue"],
     rules: {
-      "style/indent": "off",
+      ...rulesMisc,
+      ...options.rules,
     },
   }, ...userConfigs);
 };

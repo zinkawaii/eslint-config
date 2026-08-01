@@ -1,6 +1,6 @@
 import type { Rules } from "@antfu/eslint-config";
-import javascript from "../configs/javascript";
-import stylistic from "../configs/stylistic";
+import javascript from "../rules/javascript";
+import stylistic from "./stylistic";
 
 export default <Rules> {
   // Priority A
@@ -232,7 +232,7 @@ export default <Rules> {
   ...Object.fromEntries(([
     "no-useless-concat",
     "prefer-template",
-  ] as const).map((rule) => [`vue/${rule}`, javascript.rules![rule]])),
+  ] as const).map((rule) => [`vue/${rule}`, javascript[rule]])),
 
   ...Object.fromEntries(([
     "array-bracket-newline",
@@ -259,7 +259,7 @@ export default <Rules> {
     "space-infix-ops",
     "space-unary-ops",
     "template-curly-spacing",
-  ] as const).map((rule) => [`vue/${rule}`, stylistic.rules![`style/${rule}`]])),
+  ] as const).map((rule) => [`vue/${rule}`, stylistic[`style/${rule}`]])),
 
   // Conflict with Nuxt
   "vue/no-undef-components": "off",
