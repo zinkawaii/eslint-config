@@ -1,7 +1,7 @@
-import { defineConfig } from "@eslint/config-helpers";
+import { defineFlatConfig } from "eslint-flat-config-utils";
 import stylistic from "eslint-plugin-css-stylistic";
 
-export default defineConfig({
+export default defineFlatConfig({
   name: "zin/css/stylistic",
   files: [
     "**/*.css",

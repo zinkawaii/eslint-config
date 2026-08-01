@@ -1,5 +1,5 @@
-import { defineConfig } from "@eslint/config-helpers";
 import css from "@eslint/css";
+import { defineFlatConfig } from "eslint-flat-config-utils";
 import order from "./rules/order";
 import stylistic from "./rules/stylistic";
 import type { CssRuleOptions } from "./typegen";
@@ -17,7 +17,7 @@ declare module "@zinkawaii/eslint-config" {
   interface RuleOptions extends CssRuleOptions {}
 }
 
-const setup = defineConfig({
+const setup = defineFlatConfig({
   name: "zin/css/setup",
   files: [
     "**/*.css",

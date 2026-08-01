@@ -1,4 +1,4 @@
-import { defineConfig } from "@eslint/config-helpers";
+import { defineFlatConfig } from "eslint-flat-config-utils";
 import order from "eslint-plugin-css-properties-order";
 
 export const orders = [
@@ -537,7 +537,7 @@ export const orders = [
   "zoom",
 ];
 
-export default defineConfig({
+export default defineFlatConfig({
   name: "zin/css/order",
   files: [
     "**/*.css",

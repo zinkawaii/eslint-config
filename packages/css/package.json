@@ -26,8 +26,8 @@
     "eslint": ">=10.0.0"
   },
   "dependencies": {
-    "@eslint/config-helpers": "catalog:",
     "@eslint/css": "catalog:",
+    "eslint-flat-config-utils": "catalog:",
     "eslint-plugin-css-properties-order": "catalog:",
     "eslint-plugin-css-stylistic": "catalog:"
   },
