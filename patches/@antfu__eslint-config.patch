@@ -1,8 +1,8 @@
 diff --git a/dist/index.mjs b/dist/index.mjs
-index 4fee2be6b8df63bb71594290a2e113b40aaeed60..9493a1368ecbdd38cfbb3bf88ea918eb4fbd94e4 100644
+index f6441a1..4d15bd7 100644
 --- a/dist/index.mjs
 +++ b/dist/index.mjs
-@@ -12,7 +12,6 @@ import pluginAntfu from "eslint-plugin-antfu";
+@@ -12,7 +12,6 @@ import pluginComments from "@eslint-community/eslint-plugin-eslint-comments";
  import pluginImportLite from "eslint-plugin-import-lite";
  import pluginNode from "eslint-plugin-n";
  import pluginPerfectionist from "eslint-plugin-perfectionist";
@@ -10,15 +10,6 @@ index 4fee2be6b8df63bb71594290a2e113b40aaeed60..9493a1368ecbdd38cfbb3bf88ea918eb
  import pluginUnusedImports from "eslint-plugin-unused-imports";
  import globals from "globals";
  import { mergeProcessors, processorPassThrough } from "eslint-merge-processors";
-@@ -2004,7 +2003,7 @@ async function typescript(options = {}) {
- 		}] : [],
- 		...erasableOnly ? [{
- 			name: "antfu/typescript/erasable-syntax-only",
--			plugins: { "erasable-syntax-only": await interopDefault(import("./lib-BGCOhS6c.mjs")) },
-+			plugins: { "erasable-syntax-only": await interopDefault(import("eslint-plugin-erasable-syntax-only")) },
- 			rules: {
- 				"erasable-syntax-only/enums": "error",
- 				"erasable-syntax-only/import-aliases": "error",
 @@ -2405,7 +2404,6 @@ function antfu(options = {}, ...userConfigs) {
  		isInEditor,
  		...enableE18e === true ? {} : enableE18e
@@ -28,14 +19,14 @@ index 4fee2be6b8df63bb71594290a2e113b40aaeed60..9493a1368ecbdd38cfbb3bf88ea918eb
  	if (enableJsx) configs.push(jsx(enableJsx === true ? {} : enableJsx));
  	if (enableTypeScript) configs.push(typescript({
 diff --git a/package.json b/package.json
-index 2b2c08f43e9ce9678143fce3441a04414ea81bdd..d9ba31304c6fa394d4aec69089cf05c26eeb76a7 100644
+index 638880e..77ff13e 100644
 --- a/package.json
 +++ b/package.json
-@@ -130,7 +130,6 @@
-     "eslint-plugin-pnpm": "^1.6.1",
+@@ -134,7 +134,6 @@
+     "eslint-plugin-pnpm": "^1.7.0",
      "eslint-plugin-regexp": "^3.1.1",
-     "eslint-plugin-toml": "^1.4.0",
--    "eslint-plugin-unicorn": "^72.0.0",
+     "eslint-plugin-toml": "^1.5.0",
+-    "eslint-plugin-unicorn": "^73.0.0",
      "eslint-plugin-unused-imports": "^4.4.1",
      "eslint-plugin-vue": "^10.10.0",
-     "eslint-plugin-yml": "^3.6.0",
+     "eslint-plugin-yml": "^3.8.1",

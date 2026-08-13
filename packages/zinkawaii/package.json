@@ -31,6 +31,7 @@
     "astro-eslint-parser": ">=1.0.2",
     "eslint": "^9.10.0 || ^10.0.0",
     "eslint-plugin-astro": ">=1.2.0",
+    "eslint-plugin-erasable-syntax-only": "^0.4.2",
     "eslint-plugin-format": ">=0.1.0",
     "eslint-plugin-jsx-a11y": ">=6.10.2",
     "eslint-plugin-react-refresh": "^0.5.0",
@@ -67,6 +68,9 @@
       "optional": true
     },
     "eslint-plugin-astro": {
+      "optional": true
+    },
+    "eslint-plugin-erasable-syntax-only": {
       "optional": true
     },
     "eslint-plugin-format": {
@@ -135,6 +139,6 @@
     "yaml-eslint-parser": "catalog:"
   },
   "inlinedDependencies": {
-    "@antfu/eslint-config": "9.2.0"
+    "@antfu/eslint-config": "9.3.0"
   }
 }

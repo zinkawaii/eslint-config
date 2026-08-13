@@ -6,8 +6,5 @@ export default defineConfig({
     onlyBundle: [
       "@antfu/eslint-config",
     ],
-    neverBundle: [
-      "eslint-plugin-erasable-syntax-only",
-    ],
   },
 });
