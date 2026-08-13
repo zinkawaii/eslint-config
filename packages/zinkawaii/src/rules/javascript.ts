@@ -18,6 +18,7 @@ export default <Rules> {
   "no-labels": "off",
   "no-lonely-if": "error",
   "no-loop-func": "error",
+  "no-restricted-syntax": "off",
   "no-sequences": "off",
   "no-undefined": "error",
   "no-useless-concat": "error",
