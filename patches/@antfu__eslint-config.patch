@@ -1,5 +1,5 @@
 diff --git a/dist/index.mjs b/dist/index.mjs
-index 5916fc2..c4d8fa0 100644
+index 5916fc2..9419841 100644
 --- a/dist/index.mjs
 +++ b/dist/index.mjs
 @@ -12,7 +12,6 @@ import pluginAntfu from "eslint-plugin-antfu";
@@ -10,7 +10,15 @@ index 5916fc2..c4d8fa0 100644
  import pluginUnusedImports from "eslint-plugin-unused-imports";
  import globals from "globals";
  import { mergeProcessors, processorPassThrough } from "eslint-merge-processors";
-@@ -2650,7 +2649,6 @@ function antfu(options = {}, ...userConfigs) {
+@@ -1346,7 +1345,6 @@ async function pnpm(options) {
+ 			plugins: { pnpm: pluginPnpm },
+ 			rules: {
+ 				"pnpm/yaml-enforce-settings": ["error", { settings: {
+-					minimumReleaseAgeExcludePrune: true,
+ 					shellEmulator: true,
+ 					trustPolicy: "no-downgrade"
+ 				} }],
+@@ -2650,7 +2648,6 @@ function antfu(options = {}, ...userConfigs) {
  		isInEditor,
  		...enableE18e === true ? {} : enableE18e
  	}));

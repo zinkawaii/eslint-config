@@ -253,7 +253,7 @@ catalogs:
       version: 2.1.0
 
 patchedDependencies:
-  '@antfu/eslint-config': 285c7d7d5987e273a203b5318bdf33ada64a12db44c4f474ef539ec618a1fa5b
+  '@antfu/eslint-config': 9dc13306b59c15d8afccf94fd967537cd52021e0cc6b5f7a70dbbc212d3c0f52
 
 importers:
 
@@ -261,7 +261,7 @@ importers:
     devDependencies:
       '@antfu/eslint-config':
         specifier: 'catalog:'
-        version: 9.5.1(patch_hash=285c7d7d5987e273a203b5318bdf33ada64a12db44c4f474ef539ec618a1fa5b)(d6fa98f2ce16266a3cd7aa0712494374)
+        version: 9.5.1(patch_hash=9dc13306b59c15d8afccf94fd967537cd52021e0cc6b5f7a70dbbc212d3c0f52)(d6fa98f2ce16266a3cd7aa0712494374)
       '@types/node':
         specifier: 'catalog:'
         version: 26.4.1
@@ -3655,7 +3655,7 @@ snapshots:
       typescript: 6.0.3
     optional: true
 
-  '@antfu/eslint-config@9.5.1(patch_hash=285c7d7d5987e273a203b5318bdf33ada64a12db44c4f474ef539ec618a1fa5b)(d6fa98f2ce16266a3cd7aa0712494374)':
+  '@antfu/eslint-config@9.5.1(patch_hash=9dc13306b59c15d8afccf94fd967537cd52021e0cc6b5f7a70dbbc212d3c0f52)(d6fa98f2ce16266a3cd7aa0712494374)':
     dependencies:
       '@antfu/install-pkg': 2.0.1
       '@clack/prompts': 1.7.0
