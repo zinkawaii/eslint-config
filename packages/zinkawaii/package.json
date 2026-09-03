@@ -31,11 +31,13 @@
     "astro-eslint-parser": ">=1.0.2",
     "eslint": "^9.10.0 || ^10.0.0",
     "eslint-plugin-astro": ">=1.2.0",
-    "eslint-plugin-erasable-syntax-only": "^0.4.2",
+    "eslint-plugin-erasable-syntax-only": "^0.7.1",
     "eslint-plugin-format": ">=0.1.0",
     "eslint-plugin-jsx-a11y": ">=6.10.2",
     "eslint-plugin-react-refresh": "^0.5.0",
-    "eslint-plugin-solid": "^0.14.3",
+    "eslint-plugin-slop": ">=0.1.1",
+    "eslint-plugin-solid": "^0.17.0",
+    "eslint-plugin-sonarjs": ">=4.0.0",
     "eslint-plugin-svelte": ">=2.35.1",
     "eslint-plugin-vuejs-accessibility": "^2.4.1",
     "prettier-plugin-astro": "^0.14.0",
@@ -82,7 +84,13 @@
     "eslint-plugin-react-refresh": {
       "optional": true
     },
+    "eslint-plugin-slop": {
+      "optional": true
+    },
     "eslint-plugin-solid": {
+      "optional": true
+    },
+    "eslint-plugin-sonarjs": {
       "optional": true
     },
     "eslint-plugin-svelte": {
@@ -139,6 +147,6 @@
     "yaml-eslint-parser": "catalog:"
   },
   "inlinedDependencies": {
-    "@antfu/eslint-config": "9.3.0"
+    "@antfu/eslint-config": "9.5.1"
   }
 }
