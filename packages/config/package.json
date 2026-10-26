@@ -152,6 +152,6 @@
     "yaml-eslint-parser": "catalog:"
   },
   "inlinedDependencies": {
-    "@antfu/eslint-config": "9.5.1"
+    "@antfu/eslint-config": "10.0.0"
   }
 }
