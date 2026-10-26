@@ -17,7 +17,7 @@
   "scripts": {
     "build": "pnpm run vendor:patch && node vendor/tools/build-rules.js && tsdown",
     "prepack": "pnpm run build",
-    "release": "bumpp --no-push -c \"release(plugin-markdown): v%s\"",
+    "release": "node ../../scripts/release.ts",
     "test": "vitest",
     "vendor:generate": "git -C vendor diff > patches/@eslint__markdown.patch",
     "vendor:patch": "git -C vendor apply --3way ../patches/@eslint__markdown.patch"
@@ -34,4 +34,3 @@
     "satorigear": "catalog:"
   }
 }
-

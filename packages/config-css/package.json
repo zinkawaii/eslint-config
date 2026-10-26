@@ -18,6 +18,7 @@
     "build": "tsdown",
     "dev": "tsdown -w",
     "prepack": "pnpm run typegen && pnpm run build",
+    "release": "node ../../scripts/release.ts",
     "test": "vitest",
     "typegen": "unrun scripts/typegen.ts"
   },

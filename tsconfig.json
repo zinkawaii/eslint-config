@@ -6,6 +6,7 @@
     ]
   },
   "include": [
-    "packages/**/*.ts"
+    "packages/**/*.ts",
+    "scripts/**/*.ts"
   ]
 }

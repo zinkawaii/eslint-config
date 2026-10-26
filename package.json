@@ -10,7 +10,7 @@
   "scripts": {
     "build": "pnpm -r build",
     "dev": "pnpm -r --parallel dev",
-    "release": "bumpp -r --no-push -c \"release: v%s\"",
+    "publish": "node scripts/publish.ts",
     "test": "vitest"
   },
   "devDependencies": {
