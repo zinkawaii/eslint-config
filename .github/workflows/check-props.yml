@@ -19,5 +19,8 @@ jobs:
       - name: Update Data
         run: pnpm i known-css-properties@latest
 
+      - name: Prepare
+        run: pnpm run dev:prepare
+
       - name: Check Props
         run: pnpm vitest -r packages/css props.test.ts
