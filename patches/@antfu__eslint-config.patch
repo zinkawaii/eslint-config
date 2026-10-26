@@ -1,5 +1,5 @@
 diff --git a/dist/index.mjs b/dist/index.mjs
-index 5916fc2..4c107dc 100644
+index e035493..a7c5bf9 100644
 --- a/dist/index.mjs
 +++ b/dist/index.mjs
 @@ -12,7 +12,6 @@ import pluginAntfu from "eslint-plugin-antfu";
@@ -10,8 +10,8 @@ index 5916fc2..4c107dc 100644
  import pluginUnusedImports from "eslint-plugin-unused-imports";
  import globals from "globals";
  import { mergeProcessors, processorPassThrough } from "eslint-merge-processors";
-@@ -1131,7 +1130,7 @@ async function jsx(options = {}) {
- //#region src/configs/markdown.ts
+@@ -1115,7 +1114,7 @@ async function jsx(options = {}) {
+ // src/configs/markdown.ts
  async function markdown(options = {}) {
  	const { componentExts = [], files = [GLOB_MARKDOWN], gfm = true, overrides = {}, overridesMarkdown = {} } = options;
 -	const markdown = await interopDefault(import("@eslint/markdown"));
@@ -19,7 +19,7 @@ index 5916fc2..4c107dc 100644
  	return [
  		{
  			name: "antfu/markdown/setup",
-@@ -1346,7 +1345,6 @@ async function pnpm(options) {
+@@ -1326,7 +1325,6 @@ async function pnpm(options) {
  			plugins: { pnpm: pluginPnpm },
  			rules: {
  				"pnpm/yaml-enforce-settings": ["error", { settings: {
@@ -27,7 +27,7 @@ index 5916fc2..4c107dc 100644
  					shellEmulator: true,
  					trustPolicy: "no-downgrade"
  				} }],
-@@ -2650,7 +2648,6 @@ function antfu(options = {}, ...userConfigs) {
+@@ -2618,7 +2616,6 @@ function antfu(options = {}, ...userConfigs) {
  		isInEditor,
  		...enableE18e === true ? {} : enableE18e
  	}));
@@ -35,15 +35,3 @@ index 5916fc2..4c107dc 100644
  	if (enableVue) componentExts.push("vue");
  	if (enableJsx) configs.push(jsx(enableJsx === true ? {} : enableJsx));
  	if (enableTypeScript) configs.push(typescript({
-diff --git a/package.json b/package.json
-index 67da988..6fc22bc 100644
---- a/package.json
-+++ b/package.json
-@@ -142,7 +142,6 @@
-     "eslint-plugin-pnpm": "^1.9.1",
-     "eslint-plugin-regexp": "^3.2.0",
-     "eslint-plugin-toml": "^1.5.0",
--    "eslint-plugin-unicorn": "^74.0.0",
-     "eslint-plugin-unused-imports": "^4.4.1",
-     "eslint-plugin-vue": "^10.10.0",
-     "eslint-plugin-yml": "^3.8.1",
