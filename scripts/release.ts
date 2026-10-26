@@ -4,11 +4,10 @@ import { versionBump } from "bumpp";
 
 const path = join(process.cwd(), "package.json");
 const text = await readFile(path, "utf-8");
-const name = JSON.parse(text).name;
-const scope = name.slice("@zinkawaii/".length);
+const name = JSON.parse(text).name.slice("@zinkawaii/eslint-".length);
 
 await versionBump({
   push: false,
   tag: `${name}@%s`,
-  commit: `release(${scope}): v%s`,
+  commit: `release(${name}): v%s`,
 });
