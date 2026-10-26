@@ -12,10 +12,11 @@ it("check deps", async () => {
   const currentDeps = new Set(Object.keys(packageJson.dependencies));
   const upstreamDeps = new Set(Object.keys(antfu.dependencies));
 
-  expect([...currentDeps.difference(upstreamDeps)]).toEqual([
+  expect(currentDeps.difference(upstreamDeps)).toEqual(new Set([
     "@zinkawaii/eslint-plugin-markdown",
-  ]);
-  expect([...upstreamDeps.difference(currentDeps)]).toEqual([
+  ]));
+  expect(upstreamDeps.difference(currentDeps)).toEqual(new Set([
     "@eslint/markdown",
-  ]);
+    "eslint-plugin-unicorn",
+  ]));
 });
