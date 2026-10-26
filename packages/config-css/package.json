@@ -5,7 +5,11 @@
   "description": "Utakata na Shiawase",
   "author": "KazariEX",
   "license": "MIT",
-  "repository": "zinkawaii/eslint-config",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zinkawaii/eslint-config.git",
+    "directory": "packages/config-css"
+  },
   "exports": {
     ".": "./dist/index.mjs",
     "./package.json": "./package.json"
