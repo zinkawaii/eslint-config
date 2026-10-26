@@ -123,7 +123,7 @@
     "@typescript-eslint/eslint-plugin": "catalog:",
     "@typescript-eslint/parser": "catalog:",
     "@vitest/eslint-plugin": "catalog:",
-    "@zinkawaii/eslint-plugin-markdown": "workspace:",
+    "@zinkawaii/eslint-plugin-markdown": "workspace:^",
     "ansis": "catalog:",
     "cac": "catalog:",
     "eslint-config-flat-gitignore": "catalog:",

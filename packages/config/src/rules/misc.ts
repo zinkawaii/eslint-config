@@ -4,6 +4,7 @@ export default <Rules> {
   "antfu/curly": "off",
   "antfu/if-newline": "off",
   "antfu/no-top-level-await": "off",
+  "antfu/reasonable-newline": "off",
   "antfu/top-level-function": "off",
   "e18e/prefer-static-regex": "off",
   "import/consistent-type-specifier-style": "off",
