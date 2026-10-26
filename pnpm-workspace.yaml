@@ -8,6 +8,7 @@ packages:
 
 overrides:
   "@eslint/markdown": ./packages/plugin-markdown
+  eslint-plugin-unicorn: "-"
 
 patchedDependencies:
   "@antfu/eslint-config": patches/@antfu__eslint-config.patch
