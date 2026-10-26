@@ -6,4 +6,5 @@ const packageName = tag.split("@")[0];
 
 spawnSync("pnpm", ["publish", "--access", "public", "--no-git-checks"], {
   cwd: join(import.meta.dirname, "../packages", packageName),
+  stdio: "inherit",
 });
