@@ -1,7 +1,7 @@
 {
   "name": "@zinkawaii/eslint-plugin-markdown",
   "type": "module",
-  "version": "0.0.0",
+  "version": "8.0.3-patch.0",
   "description": "Utakata na Shiawase",
   "author": "KazariEX",
   "license": "MIT",
