@@ -6,6 +6,9 @@ shellEmulator: true
 packages:
   - packages/*
 
+overrides:
+  "@eslint/markdown": ./packages/plugin-markdown
+
 patchedDependencies:
   "@antfu/eslint-config": patches/@antfu__eslint-config.patch
 
@@ -15,9 +18,11 @@ catalog:
   "@clack/prompts": ^1.8.1
   "@e18e/eslint-plugin": ^0.8.1
   "@eslint-community/eslint-plugin-eslint-comments": ^4.8.1
+  "@eslint/core": ^1.2.1
   "@eslint/css": ^2.0.0
-  "@eslint/markdown": ^8.0.3
+  "@eslint/plugin-kit": ^0.7.3
   "@stylistic/eslint-plugin": ^5.10.0
+  "@types/mdast": ^4.0.4
   "@types/node": ^26.6.5
   "@typescript-eslint/eslint-plugin": ^8.71.2
   "@typescript-eslint/parser": ^8.71.2
@@ -48,10 +53,13 @@ catalog:
   eslint-plugin-yml: ^3.9.0
   eslint-processor-vue-blocks: ^2.0.0
   eslint-typegen: ^2.3.1
+  github-slugger: ^2.0.0
   globals: ^17.13.0
   known-css-properties: ^0.37.0
   local-pkg: ^1.2.1
+  micromark-util-normalize-identifier: ^2.0.1
   parse-gitignore: ^2.0.0
+  satorigear: ^0.0.9
   toml-eslint-parser: ^1.0.3
   tsdown: ^0.23.1
   unrun: ^0.3.1

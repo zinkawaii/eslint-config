@@ -1,0 +1,37 @@
+{
+  "name": "@zinkawaii/eslint-plugin-markdown",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "Utakata na Shiawase",
+  "author": "KazariEX",
+  "license": "MIT",
+  "repository": "zinkawaii/eslint-config",
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "types": "./dist/index.d.mts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "pnpm run vendor:patch && node vendor/tools/build-rules.js && tsdown",
+    "prepack": "pnpm run build",
+    "release": "bumpp --no-push -c \"release(plugin-markdown): v%s\"",
+    "test": "vitest",
+    "vendor:generate": "git -C vendor diff > patches/@eslint__markdown.patch",
+    "vendor:patch": "git -C vendor apply --3way ../patches/@eslint__markdown.patch"
+  },
+  "peerDependencies": {
+    "eslint": ">=10.0.0"
+  },
+  "dependencies": {
+    "@eslint/core": "catalog:",
+    "@eslint/plugin-kit": "catalog:",
+    "@types/mdast": "catalog:",
+    "github-slugger": "catalog:",
+    "micromark-util-normalize-identifier": "catalog:",
+    "satorigear": "catalog:"
+  }
+}
+

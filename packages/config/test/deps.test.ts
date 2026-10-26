@@ -8,5 +8,14 @@ it("check deps", async () => {
 
   expect(packageJson.peerDependencies).toEqual(antfu.peerDependencies);
   expect(packageJson.peerDependenciesMeta).toEqual(antfu.peerDependenciesMeta);
-  expect(Object.keys(packageJson.dependencies)).toEqual(Object.keys(antfu.dependencies));
+
+  const currentDeps = new Set(Object.keys(packageJson.dependencies));
+  const upstreamDeps = new Set(Object.keys(antfu.dependencies));
+
+  expect([...currentDeps.difference(upstreamDeps)]).toEqual([
+    "@zinkawaii/eslint-plugin-markdown",
+  ]);
+  expect([...upstreamDeps.difference(currentDeps)]).toEqual([
+    "@eslint/markdown",
+  ]);
 });

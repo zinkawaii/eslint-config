@@ -1,0 +1,206 @@
+diff --git a/src/language/markdown-language.js b/src/language/markdown-language.js
+index 5d4302d..ce92982 100644
+--- a/src/language/markdown-language.js
++++ b/src/language/markdown-language.js
+@@ -10,13 +10,7 @@
+ //------------------------------------------------------------------------------
+ 
+ import { MarkdownSourceCode } from "./markdown-source-code.js";
+-import { fromMarkdown } from "mdast-util-from-markdown";
+-import { frontmatterFromMarkdown } from "mdast-util-frontmatter";
+-import { gfmFromMarkdown } from "mdast-util-gfm";
+-import { mathFromMarkdown } from "mdast-util-math";
+-import { frontmatter } from "micromark-extension-frontmatter";
+-import { gfm } from "micromark-extension-gfm";
+-import { math } from "micromark-extension-math";
++import { createParser as createSatorigear } from "satorigear";
+ 
+ //-----------------------------------------------------------------------------
+ // Types
+@@ -25,10 +19,8 @@ import { math } from "micromark-extension-math";
+ /**
+  * @import { Language, File, ParseResult, OkParseResult } from "@eslint/core";
+  * @import { Node, Root } from "mdast";
+- * @import { Options } from "mdast-util-from-markdown";
++ * @import { Parser } from "satorigear";
+  * @import { MarkdownLanguageOptions, MarkdownLanguageContext } from "../types.js";
+- * @typedef {Options['extensions']} Extensions
+- * @typedef {Options['mdastExtensions']} MdastExtensions
+  * @typedef {"commonmark"|"gfm"} ParserMode
+  */
+ 
+@@ -37,72 +29,44 @@ import { math } from "micromark-extension-math";
+ //-----------------------------------------------------------------------------
+ 
+ /**
+- * Parser configuration for JSON frontmatter.
+- * Example of supported frontmatter format:
+- * ```markdown
+- * ---
+- * {
+- *   "title": "My Document",
+- *   "date": "2025-06-09"
+- * }
+- * ---
+- * ```
++ * The cache of parsers.
++ * @type {Map<string, Parser>}
+  */
+-const jsonFrontmatterConfig = {
+-	type: "json",
+-	marker: "-",
+-};
++const parsers = new Map();
+ 
+ /**
+  * Create parser options based on `mode` and `languageOptions`.
+  * @param {ParserMode} mode The markdown parser mode.
+  * @param {MarkdownLanguageOptions} languageOptions Language options.
+- * @returns {{extensions: Extensions, mdastExtensions: MdastExtensions}} Parser options for micromark and mdast.
++ * @returns {Parser} Satorigear parser.
+  */
+-function createParserOptions(mode, languageOptions) {
+-	/** @type {Extensions} */
+-	const extensions = [];
+-	/** @type {MdastExtensions} */
+-	const mdastExtensions = [];
+-
+-	// 1. `mode`: Add GFM extensions if mode is "gfm"
+-	if (mode === "gfm") {
+-		extensions.push(gfm());
+-		mdastExtensions.push(gfmFromMarkdown());
+-	}
+-
+-	// 2. `languageOptions.frontmatter`: Handle frontmatter options
+-	const frontmatterOption = languageOptions?.frontmatter;
+-
+-	// Skip frontmatter entirely if false
+-	if (frontmatterOption !== false) {
+-		if (frontmatterOption === "yaml") {
+-			extensions.push(frontmatter(["yaml"]));
+-			mdastExtensions.push(frontmatterFromMarkdown(["yaml"]));
+-		} else if (frontmatterOption === "toml") {
+-			extensions.push(frontmatter(["toml"]));
+-			mdastExtensions.push(frontmatterFromMarkdown(["toml"]));
+-		} else if (frontmatterOption === "json") {
+-			extensions.push(frontmatter(jsonFrontmatterConfig));
+-			mdastExtensions.push(
+-				frontmatterFromMarkdown(jsonFrontmatterConfig),
+-			);
+-		}
+-	}
+-
+-	// 3. `languageOptions.math`: Handle math option
+-	const mathOption = languageOptions?.math;
+-
+-	// Skip math entirely if false
+-	if (mathOption === true) {
+-		extensions.push(math());
+-		mdastExtensions.push(mathFromMarkdown());
+-	}
+-
+-	return {
+-		extensions,
+-		mdastExtensions,
+-	};
++function createParser(mode, languageOptions) {
++  const key = [
++    mode,
++    languageOptions.frontmatter,
++    languageOptions.math,
++  ].join("+");
++
++  if (parsers.has(key)) {
++    return parsers.get(key);
++  }
++
++  const gfm = mode === "gfm";
++  const parser = createSatorigear({
++    features: {
++      footnote: gfm,
++      frontmatter: languageOptions.frontmatter && {
++        marker: languageOptions.frontmatter === "toml" ? "+" : "-"
++      },
++      math: languageOptions.math,
++      strikethrough: gfm,
++      table: gfm,
++      taskList: gfm,
++    },
++  });
++
++  parsers.set(key, parser);
++  return parser;
+ }
+ 
+ //-----------------------------------------------------------------------------
+@@ -216,11 +180,11 @@ export class MarkdownLanguage {
+ 		 * problem that ESLint identified just like any other.
+ 		 */
+ 		try {
+-			const options = createParserOptions(
++			const parser = createParser(
+ 				this.#mode,
+ 				context?.languageOptions,
+ 			);
+-			const root = fromMarkdown(text, options);
++			const root = parser.parse(text);
+ 
+ 			return {
+ 				ok: true,
+diff --git a/src/processor.js b/src/processor.js
+index 38e9ef5..a0bef96 100644
+--- a/src/processor.js
++++ b/src/processor.js
+@@ -7,7 +7,7 @@
+ // Imports
+ //-----------------------------------------------------------------------------
+ 
+-import { fromMarkdown } from "mdast-util-from-markdown";
++import { createParser } from "satorigear";
+ 
+ //-----------------------------------------------------------------------------
+ // Type Definitions
+@@ -257,6 +257,8 @@ const languageToFileExtension = {
+ 	markdown: "md",
+ };
+ 
++const defaultParser = createParser();
++
+ /**
+  * Extracts lintable code blocks from Markdown text.
+  * @param {string} sourceText The text of the file.
+@@ -265,7 +267,7 @@ const languageToFileExtension = {
+  */
+ function preprocess(sourceText, filename) {
+ 	const text = sourceText.startsWith(BOM) ? sourceText.slice(1) : sourceText;
+-	const ast = fromMarkdown(text);
++	const ast = defaultParser.parse(text);
+ 
+ 	/** @type {Block[]} */
+ 	const blocks = [];
+diff --git a/src/rules/no-reversed-media-syntax.js b/src/rules/no-reversed-media-syntax.js
+index 141beb7..ee45149 100644
+--- a/src/rules/no-reversed-media-syntax.js
++++ b/src/rules/no-reversed-media-syntax.js
+@@ -9,7 +9,7 @@
+ 
+ /**
+  * @import { Heading, Paragraph, TableCell, FootnoteReference, Html, Image, ImageReference, InlineCode, LinkReference } from "mdast";
+- * @import { InlineMath } from "mdast-util-math";
++ * @import { InlineMath } from "satorigear";
+  * @import { MarkdownRuleDefinition } from "../types.js";
+  * @typedef {"reversedSyntax"} NoReversedMediaSyntaxMessageIds
+  * @typedef {[]} NoReversedMediaSyntaxOptions
+diff --git a/src/types.ts b/src/types.ts
+index fcd77a5..fcfacfd 100644
+--- a/src/types.ts
++++ b/src/types.ts
+@@ -38,7 +38,7 @@ import type {
+ 	// Extensions (front matter)
+ 	Yaml,
+ } from "mdast";
+-import type { InlineMath, Math } from "mdast-util-math";
++import type { InlineMath, Math } from "satorigear";
+ import type {
+ 	LanguageContext,
+ 	LanguageOptions,

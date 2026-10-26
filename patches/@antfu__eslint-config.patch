@@ -1,5 +1,5 @@
 diff --git a/dist/index.mjs b/dist/index.mjs
-index 5916fc2..9419841 100644
+index 5916fc2..4c107dc 100644
 --- a/dist/index.mjs
 +++ b/dist/index.mjs
 @@ -12,7 +12,6 @@ import pluginAntfu from "eslint-plugin-antfu";
@@ -10,6 +10,15 @@ index 5916fc2..9419841 100644
  import pluginUnusedImports from "eslint-plugin-unused-imports";
  import globals from "globals";
  import { mergeProcessors, processorPassThrough } from "eslint-merge-processors";
+@@ -1131,7 +1130,7 @@ async function jsx(options = {}) {
+ //#region src/configs/markdown.ts
+ async function markdown(options = {}) {
+ 	const { componentExts = [], files = [GLOB_MARKDOWN], gfm = true, overrides = {}, overridesMarkdown = {} } = options;
+-	const markdown = await interopDefault(import("@eslint/markdown"));
++	const markdown = await interopDefault(import("@zinkawaii/eslint-plugin-markdown"));
+ 	return [
+ 		{
+ 			name: "antfu/markdown/setup",
 @@ -1346,7 +1345,6 @@ async function pnpm(options) {
  			plugins: { pnpm: pluginPnpm },
  			rules: {

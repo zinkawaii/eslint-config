@@ -1,0 +1,6 @@
+[submodule "packages/plugin-markdown/vendor"]
+	path = packages/plugin-markdown/vendor
+	url = https://github.com/eslint/markdown.git
+  branch = main
+  ignore = dirty
+  shallow = true
