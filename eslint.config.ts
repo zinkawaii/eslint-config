@@ -1,4 +1,4 @@
-import zin from "./packages/zinkawaii/src";
+import zin from "./packages/config/src";
 
 export default zin({
   rules: {
