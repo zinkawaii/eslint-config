@@ -22,7 +22,7 @@
     "build": "node vendor/tools/build-rules.js && tsdown",
     "dev:prepare": "git submodule update --init && pnpm run vendor:apply-patch",
     "prepack": "pnpm run build",
-    "release": "node ../../scripts/release.ts",
+    "release": "zin release",
     "test": "vitest",
     "vendor:generate-patch": "git -C vendor diff > patches/@eslint__markdown.patch",
     "vendor:apply-patch": "git -C vendor apply --3way ../patches/@eslint__markdown.patch"

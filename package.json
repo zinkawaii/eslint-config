@@ -11,12 +11,12 @@
     "build": "pnpm -r build",
     "dev": "pnpm -r --parallel dev",
     "dev:prepare": "pnpm -r dev:prepare",
-    "publish": "node scripts/publish.ts",
     "test": "vitest"
   },
   "devDependencies": {
     "@antfu/eslint-config": "catalog:",
     "@types/node": "catalog:",
+    "@zinkawaii/scripts": "catalog:",
     "@zinkawaii/tsconfig": "catalog:",
     "bumpp": "catalog:",
     "eslint": "catalog:",

@@ -23,7 +23,7 @@
     "dev": "tsdown -w",
     "dev:prepare": "pnpm run typegen",
     "prepack": "pnpm run build",
-    "release": "node ../../scripts/release.ts",
+    "release": "zin release",
     "test": "vitest",
     "typegen": "unrun scripts/typegen.ts"
   },
